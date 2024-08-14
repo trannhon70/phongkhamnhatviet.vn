@@ -1,0 +1,65 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --max-width: 1920px;
+    --container: 1000px;
+    --width-100: 100%;
+    /* color */
+    --color-white: white;
+    --color-black: black;
+    --color-01969A: #01969A;
+    --color-00D8D8: #00D8D8;
+
+   
+
+    /* background */
+    --background-color-white: white;
+    --background-color-F2F2F2: #f2f2f2;
+    --background-color-01969A: #01969A;
+    --background-color-00D8D8: #00D8D8;
+   
+    /* font size */
+    --font-size-10: 10px;
+    --font-size-12: 12px;
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-20: 20px;
+    --font-size-22: 22px;
+    --font-size-24: 24px;
+    --font-size-26: 26px;
+    --font-size-28: 28px;
+
+    /* font weight */
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --margin-auto: 0 auto;
+
+    /* position */
+    --position-relative: relative;
+    --position-absolute: absolute;
+
+    /* flex */
+    --display-flex: flex;
+    --align-item-center: center;
+    --justify-content-center: center;
+
+    /* text */
+    --text-decoration-none: none;
+    --text-tranform-uppercase: uppercase;
+    --text-tranform-capitalize: capitalize;
+
+    /* cursor: pointer; */
+    --cursor-pointer:pointer;
+
+}
+body {
+    width: var(--width-100);
+    font-size: 1rem;
+    max-width: var(--max-width);
+}
