@@ -155,7 +155,7 @@
     display: none;
     position: var(--position-absolute);
     top: 25px;
-    left: 0;
+    left: -180px;
     width: var(--width-100);
     opacity: 0;
     transform: translateY(-100%);
@@ -164,13 +164,12 @@
 
 .header__menu>div{
     height: 21px;
-    width: var(--width-100);
+    width: 880px;
 }
 
 .header__menu > nav{
-    min-width: 650px;
+    min-width: 860px;
     display: var(--display-flex);
-    align-items: var(--align-item-center);
     background-color: var(--background-color-01969A);
     padding: 10px;
     gap: 10px;
@@ -185,7 +184,7 @@
 
 .header__menu > nav>ul > li {
     border-bottom: 1px solid var(--color-00D8D8) ;
-    padding: 7px 0px;
+    padding: 10px 0px;
 }
 
 .header__menu > nav>ul > li > span {

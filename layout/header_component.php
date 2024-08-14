@@ -54,22 +54,18 @@
                     <div class="header__menu">
                         <div></div>
                         <nav>
+                        <?php foreach ($getAllChiTietKhoaAndBenh as $value) : ?>
                             <ul>
                                 <li >
-                                    <span>nam khoa</span>
+                                    <span><?php echo $value['name']; ?></span>
                                 </li>
+                                <?php foreach ($value['danhSachBenh'] as $benh) : ?>
                                 <li  class="header__menu-li">
-                                    <a href="<?php echo $local ?>">bệnh bao quy đầu</a>
+                                    <a href="<?php echo $local ?>"><?php echo $benh['name']; ?></a>
                                 </li>
+                                <?php endforeach; ?>
                             </ul>
-                            <ul>
-                                <li>
-                                    <span>nam khoa</span>
-                                </li>
-                                <li class="header__menu-li" >
-                                    <a href="">bệnh bao quy đầu</a>
-                                </li>
-                            </ul>
+                            <?php endforeach; ?>
                         </nav>
                     </div>
                 </li>

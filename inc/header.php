@@ -15,6 +15,8 @@ spl_autoload_register(function ($className) {
 $khoas = new Khoa();
 $post = new post();
 $benh = new Benh();
+
+$getAllChiTietKhoaAndBenh = $khoas->getAllChiTietKhoaAndBenh();
 ?>
 
 
