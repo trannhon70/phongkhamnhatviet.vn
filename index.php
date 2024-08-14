@@ -3,7 +3,9 @@
 </head>
 <body>
     <?php include 'layout/header_component.php' ?>
-
+    <main>
+        <?php include 'layout/slider_component.php' ?>
+    </main>
 
 
 <?php include 'inc/footer.php' ?>
