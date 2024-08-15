@@ -77,8 +77,8 @@
                 if(formData.hoten.length > 100){
                    return toastr.error("Họ và tên không được vượt quá 100 ký tự");
                 }
-                if(formData.trieuchung.length > 500){
-                   return toastr.error("Mô tả triệu chứng không được vượt quá 500 ký tự");
+                if(formData.trieuchung.length > 200){
+                   return toastr.error("Mô tả triệu chứng không được vượt quá 200 ký tự");
                 }
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", "<?php echo $local ?>/classes/khach_hang_ajax.php", true);
