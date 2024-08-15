@@ -13,6 +13,7 @@
     --color-01969A: #01969A;
     --color-00D8D8: #00D8D8;
     --color-50e2e7: #50e2e7;
+    --color-067579: #067579;
     --color-999: #999;
 
    
@@ -48,6 +49,7 @@
 
     /* flex */
     --display-flex: flex;
+    --display-block: block;
     --align-item-center: center;
     --justify-content-center: center;
 
@@ -56,6 +58,7 @@
     --text-tranform-uppercase: uppercase;
     --text-tranform-capitalize: capitalize;
     --text-center : center;
+    --text-justify : justify;
 
     /* cursor: pointer; */
     --cursor-pointer:pointer;
