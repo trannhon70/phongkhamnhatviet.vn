@@ -38,6 +38,7 @@ $local = '/newphongkhamdakhoanhatviet.vn';
     <title>Phòng khám đa khoa</title>
     <link rel="icon" href="<?php echo $local ?>/images/icons/icon_logo.png" type="image/x-icon">
     <link rel="preload" href="<?php echo $local ?>/css/index.min.css" as="style" onload='this.onload=null,this.rel="stylesheet"'>
+    <link rel="preload" href="<?php echo $local ?>/css/toastr.min.css" as="style" onload='this.onload=null,this.rel="stylesheet"'>
 
     <style amp-boilerplate>
         body {
@@ -107,4 +108,5 @@ $local = '/newphongkhamdakhoanhatviet.vn';
             }
         </style>
         <link rel="stylesheet" href="<?php echo $local ?>/css/index.min.css">
+        <link rel="stylesheet" href="<?php echo $local ?>/css/toastr.min.css">
     </noscript>

@@ -17,9 +17,98 @@
     </div>
 
     <div class="slider__chat">
-        <div class="slider__chat" >
-
+        <div id="form-chatPc" class="slider__chat-body">
+            <div class="slider__chat-title">
+                DẶT LỊCH KHÁM
+            </div>
+            <div class="slider__chat-input">
+                <input name="hoten" type="text" placeholder="Nhập họ tên">
+            </div>
+            <div class="slider__chat-input">
+                <input name="ngaysinh" type="number" placeholder="Nhập năm sinh">
+            </div>
+            <div class="slider__chat-input">
+                <input name="sdt" type="number" placeholder="Nhập số điện thoại">
+            </div>
+            <div class="slider__chat-input">
+                <input name="trieuchung" type="text" placeholder="Mô tả triệu chứng">
+            </div>
+            <div class="slider__chat-row">
+                <div class="slider__chat-row-input">
+                    <input name="ngaykham" type="date" placeholder="Ngày khám">
+                </div>
+                <div class="slider__chat-row-input">
+                    <input name="giokham" type="number" placeholder="Giờ khám">
+                </div>
+            </div>
+            <div class="slider__chat-button">
+                <button name="submit" >
+                    GỬI
+                </button>
+            </div>
         </div>
 
     </div>
 </section>
+
+<script>
+    function formatPhoneNumber(phoneNumber) {
+        let cleaned = ('' + phoneNumber).replace(/\D/g, '');
+        let match = cleaned.match(/^(\d{4})(\d{3})(\d{3})$/);
+        if (match) {
+            return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        }
+        return null;
+    }
+    document.querySelector('button[name="submit"]').addEventListener('click', function(event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của nút submit
+
+        let form = document.getElementById('form-chatPc');
+        let inputs = form.getElementsByTagName('input');
+        let formData = {};
+
+        for (let i = 0; i < inputs.length; i++) {
+            let input = inputs[i];
+            formData[input.name] = input.value;
+        }
+        formData['url'] = window.location.href;
+        if (formData.giokham !== '' && formData.hoten !== '' && formData.ngaykham !== '' && formData.ngaysinh !== '' && formData.sdt !== '' && formData.trieuchung !== '') {
+            if (formatPhoneNumber(formData.sdt)) {
+                if(formData.hoten.length > 100){
+                   return toastr.error("Họ và tên không được vượt quá 100 ký tự");
+                }
+                if(formData.trieuchung.length > 500){
+                   return toastr.error("Mô tả triệu chứng không được vượt quá 500 ký tự");
+                }
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "<?php echo $local ?>/classes/khach_hang_ajax.php", true);
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+
+                        let response = JSON.parse(xhr.responseText);
+                        if (response.status === 'success') {
+                            toastr.success(response.message);
+                            for (let i = 0; i < inputs.length; i++) {
+                                let input = inputs[i];
+                                input.value = '';
+                            }
+
+                        } else {
+                            toastr.error(response.message);
+                        }
+                    }
+                };
+
+                xhr.send(JSON.stringify(formData));
+            } else {
+                toastr.error("Số điện thoại không hợp lệ!");
+            }
+
+        } else {
+            toastr.error("Tất cả các trường không được bỏ trống!");
+        }
+
+
+    });
+</script>

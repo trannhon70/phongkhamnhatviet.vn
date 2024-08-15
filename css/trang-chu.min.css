@@ -210,7 +210,8 @@
 }
 
 /* slider */
-#slide{
+#slider{
+    position: var(--position-relative);
     display: var(--display-flex);
     /* height: 500px; */
     align-items: var(--align-item-center);
@@ -274,3 +275,90 @@
     height: 18px;
 }
 
+.slider__chat{
+    position: var(--position-absolute);
+    top: 10px;
+    right: 70px;
+    border: 2px solid var(--color-01969A);
+    padding: 15px 15px;
+    border-radius: 15px;
+    background-color: var(--background-color-white);
+    width: 360px;
+}
+
+.slider__chat-body{
+    width: 100%;
+}
+
+.slider__chat-title {
+    text-align: var(--text-center);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-700);
+    color: var(--color-01969A);
+}
+
+.slider__chat-input {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.slider__chat-input>input {
+    width: 94%;
+    height: 35px;
+    outline: none;
+    border-radius: 15px;
+    font-size: var(--font-size-12);
+    padding: 0px 10px;
+    font-weight: var(--font-weight-600);
+    color: var(--color-999);
+    border: 2px solid rgba(1, 150, 154, 1);
+    font-style: italic;
+}
+
+.slider__chat-row{
+    margin-top: 10px;
+    display: var(--display-flex);
+    align-items: var(--align-item-center);
+    justify-content: center;
+    gap: 4%;
+}
+
+.slider__chat-row-input {
+    width: 48%;
+}
+
+.slider__chat-row-input > input {
+    width: 87%;
+    height: 35px;
+    outline: none;
+    border-radius: 15px;
+    font-size: var(--font-size-12);
+    padding: 0px 10px;
+    font-weight: var(--font-weight-600);
+    color: var(--color-999);
+    border: 2px solid rgba(1, 150, 154, 1);
+    font-style: italic;
+}
+
+.slider__chat-button{
+    margin-top: 10px;
+    display: var(--display-flex);
+    align-items: var(--align-item-center);
+    justify-content: var(--justify-content-center);
+}
+
+.slider__chat-button > button {
+    border-radius: 15px;
+    width: 50%;
+    background-image: linear-gradient(to right, var(--color-01969A), var(--color-50e2e7));
+    color: var(--color-white);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-700);
+    border: none;
+    cursor: var(--cursor-pointer);
+    padding: 5px 0px;
+}
+
+.slider__chat-button > button:hover{
+    background-image: linear-gradient(to right, var(--color-01969A), var(--color-01969A));
+}

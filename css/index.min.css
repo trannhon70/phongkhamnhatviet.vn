@@ -12,6 +12,8 @@
     --color-black: black;
     --color-01969A: #01969A;
     --color-00D8D8: #00D8D8;
+    --color-50e2e7: #50e2e7;
+    --color-999: #999;
 
    
 
@@ -53,6 +55,7 @@
     --text-decoration-none: none;
     --text-tranform-uppercase: uppercase;
     --text-tranform-capitalize: capitalize;
+    --text-center : center;
 
     /* cursor: pointer; */
     --cursor-pointer:pointer;
