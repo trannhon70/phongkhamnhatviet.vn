@@ -594,3 +594,20 @@
 .experienced__list-item>img {
     width: var(--width-100);
 }
+
+
+.experienced__list-item-title{
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-20);
+    line-height: 30px;
+    text-align: var(--text-center);
+    color: var(--color-01969A);
+    text-transform: var(--text-tranform-uppercase);
+}
+
+.experienced__list-item-text {
+    font-size: var(--font-size-18);
+    line-height: 25px;
+    text-align: var(--text-center);
+    color: var(--color-black);
+}

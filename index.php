@@ -113,10 +113,31 @@
                 <div class="experienced__list">
                     <div class="experienced__list-item" >
                         <img src="<?php echo $local ?>/images/users/user_1.webp" alt="..."></img>
-                        <div>
+                        <div class="experienced__list-item-title" >
                             LÊ BẢN BÌNH
                         </div>
-                        <div>CK: Ngoại khoa</div>
+                        <div class="experienced__list-item-text">CK: Ngoại khoa</div>
+                    </div>
+                    <div class="experienced__list-item" >
+                        <img src="<?php echo $local ?>/images/users/user_2.webp" alt="..."></img>
+                        <div class="experienced__list-item-title" >
+                            nguyễn thùy dung
+                        </div>
+                        <div class="experienced__list-item-text">CK: Siêu âm</div>
+                    </div>
+                    <div class="experienced__list-item" >
+                        <img src="<?php echo $local ?>/images/users/user_3.webp" alt="..."></img>
+                        <div class="experienced__list-item-title" >
+                            Ngô minh tài
+                        </div>
+                        <div class="experienced__list-item-text">CK: Xét nghiệm</div>
+                    </div>
+                    <div class="experienced__list-item" >
+                        <img src="<?php echo $local ?>/images/users/user_4.webp" alt="..."></img>
+                        <div class="experienced__list-item-title" >
+                            Trần gia phú
+                        </div>
+                        <div class="experienced__list-item-text">CK: Phục hồi chức năng</div>
                     </div>
                 </div>
             </div>

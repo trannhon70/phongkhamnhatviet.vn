@@ -19,7 +19,7 @@
     <div class="slider__chat">
         <div id="form-chatPc" class="slider__chat-body">
             <div class="slider__chat-title">
-                DẶT LỊCH KHÁM
+                ĐẶT LỊCH KHÁM
             </div>
             <div class="slider__chat-input">
                 <input name="hoten" type="text" placeholder="Nhập họ tên">
