@@ -61,7 +61,7 @@
                                 </li>
                                 <?php foreach ($value['danhSachBenh'] as $benh) : ?>
                                 <li  class="header__menu-li">
-                                    <a href="<?php echo $local ?>"><?php echo $benh['name']; ?></a>
+                                    <a href="<?php echo $local ?>/danh-muc.php?khoa=<?php echo $value['slug'] ?>&benh=<?php echo $benh['slug'] ?>&page=1"><?php echo $benh['name']; ?></a>
                                 </li>
                                 <?php endforeach; ?>
                             </ul>
