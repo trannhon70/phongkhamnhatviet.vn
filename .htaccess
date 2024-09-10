@@ -2,6 +2,9 @@ RewriteEngine On
 
 # Rewrite for index.html
 RewriteRule ^trang-chu\.html$ index.php [L]
+RewriteRule ^tin-tuc-y-khoa\.html$ tin-tuc-y-khoa.php [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ chi-tiet-bai-viet.php?khoa=$1&baiviet=$2 [L]
 
 
 

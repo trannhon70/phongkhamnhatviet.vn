@@ -87,6 +87,27 @@ include_once($filepath . '/../helpers/format.php');
         }
         return $data;
       }
+
+      public function getActiveByBenh($path) {
+        $path = mysqli_real_escape_string($this->db->link, $path);
+        $queryBenh = "SELECT id_benh FROM `admin_baiviet` WHERE slug = '$path' LIMIT 1";
+        $resultBenh = $this->db->select($queryBenh);
+        if($resultBenh && $resultBenh->num_rows > 0){
+            $row = $resultBenh->fetch_assoc();
+            $idBenh = $row['id_benh'];
+            $query = "SELECT slug FROM admin_benh WHERE id = '$idBenh' LIMIT 1";
+            $result = $this->db->select($query);
+            
+            if($result && $result->num_rows > 0){
+                return $result->fetch_assoc(); 
+            } else {
+                return null;
+            }
+        }
+        
+        return null;
+    }
+    
   }
   
 ?>

@@ -83,7 +83,7 @@
             existingMobileScripts.forEach(script => script.remove());
             existingDesktopScripts.forEach(script => script.remove());
 
-            if (window.innerWidth < 999) {
+            if (window.innerWidth < 1000) {
                 const mobileScripts = [
                     // {
                     //     src: 'js/slider_feedback.min.js',
@@ -105,8 +105,9 @@
                     document.body.appendChild(script);
                 });
             } else {
-                const desktopScripts = [{
-                        src: 'js/slider.min.js',
+                const desktopScripts = [
+                    {
+                        src: '<?php echo $local ?>/js/slider.min.js',
                         id: 'desktop-0'
                     },
 

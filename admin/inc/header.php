@@ -9,7 +9,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     Session::destroy();
 }
 
-$local = 'http://localhost/phongkhamdakhoanhatviet.vn';
+$local = 'http://localhost/newphongkhamdakhoanhatviet.vn';
 // $local = 'https://phongkhamdakhoanhatviet.vn';
 ?>
 

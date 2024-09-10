@@ -70,7 +70,7 @@
                     </div>
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border">
-                    <a class="" href="<?php echo $local ?>">tin tức y khoa</a>
+                    <a class="" href="<?php echo $local ?>/tin-tuc-y-khoa.html">tin tức y khoa</a>
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border">
                     <a class="" href="<?php echo $local ?>">tư vấn trực tuyến</a>

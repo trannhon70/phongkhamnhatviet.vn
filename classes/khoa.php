@@ -99,6 +99,51 @@ include_once($filepath . '/../helpers/format.php');
         
         return $data;
     }
+
+    public function getDanhMucBenhByBaiViet($slug){
+        // Xử lý input để tránh lỗi SQL Injection
+        $slug = mysqli_real_escape_string($this->db->link, $slug);
+        // Truy vấn để lấy id_khoa từ bảng admin_baiviet dựa trên slug
+        $queryBaiViet = "SELECT id_khoa FROM `admin_baiviet` WHERE slug = '$slug' LIMIT 1";
+        $resultBaiViet = $this->db->select($queryBaiViet);
+        
+        $data = []; // Mảng lưu trữ kết quả cuối cùng
+    
+        if($resultBaiViet){
+            // Duyệt qua từng bản ghi của bảng admin_baiviet (nếu có nhiều bản ghi)
+            while($rowBaiViet = $resultBaiViet->fetch_assoc()){
+                $id = $rowBaiViet['id_khoa'];
+                // Truy vấn lấy thông tin khoa từ bảng admin_khoa dựa trên id_khoa
+                $queryKhoa = "SELECT * FROM `admin_khoa` WHERE id = '$id' LIMIT 1";
+                $resultKhoa = $this->db->select($queryKhoa);
+                
+                if($resultKhoa){
+                    while($rowKhoa = $resultKhoa->fetch_assoc()){
+                        $idKhoa = $rowKhoa['id'];
+                        // Truy vấn lấy danh sách bệnh từ bảng admin_benh dựa trên id_khoa
+                        $danhSachBenh = "SELECT * FROM `admin_benh` WHERE id_khoa = '$idKhoa'";
+                        $resultDSBenh = $this->db->select($danhSachBenh);
+                        
+                        // Lưu danh sách bệnh vào mảng
+                        $danhSachBenhArr = [];
+                        if($resultDSBenh){
+                            while($rowBenh = $resultDSBenh->fetch_assoc()){
+                                $danhSachBenhArr[] = $rowBenh;
+                            }
+                        }
+                        
+                        // Gán danh sách bệnh vào mảng kết quả khoa
+                        $rowKhoa['danhSachBenh'] = $danhSachBenhArr;
+                        $data[] = $rowKhoa;
+                    }
+                }
+            }   
+        }
+    
+        // Trả về mảng kết quả cuối cùng
+        return $data;
+    }
+    
     
   }
   

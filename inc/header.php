@@ -26,7 +26,7 @@ header("Pragma: no-cache");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: max-age=2592000");
 
-$local = '/newphongkhamdakhoanhatviet.vn';
+$local = 'http://localhost/newphongkhamdakhoanhatviet.vn';
 // $local ='https://phongkhamdakhoanhatviet.vn'
 ?>
 <!DOCTYPE html>
@@ -110,3 +110,78 @@ $local = '/newphongkhamdakhoanhatviet.vn';
         <link rel="stylesheet" href="<?php echo $local ?>/css/index.min.css">
         <link rel="stylesheet" href="<?php echo $local ?>/css/toastr.min.css">
     </noscript>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function updateHeaderStylesheet() {
+                // Xóa các stylesheet cũ nếu có
+                const existingMobile = document.querySelectorAll('link[id^="mobile-"]');
+                const existingDesktop = document.querySelectorAll('link[id^="desktop-"]');
+                existingMobile.forEach(mobile => mobile.remove());
+                existingDesktop.forEach(desktop => desktop.remove());
+
+                // Thêm stylesheet mới dựa trên kích thước cửa sổ
+                if (window.innerWidth < 1000) {
+                    const mobileLink = [
+                        // {
+                        //     href: 'css/header_mobile.min.css',
+                        //     id: 'mobile-0'
+                        // },
+                        // {
+                        //     href: 'css/foooter_mobile.min.css',
+                        //     id: 'mobile-1'
+                        // },
+
+                    ];
+                    mobileLink.forEach(({
+                        href,
+                        id
+                    }) => {
+                        const link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.href = href;
+                        link.id = id;
+                        document.head.appendChild(link);
+                    });
+
+                } else {
+                    const desktopLink = [
+                        {
+                            href: '<?php echo $local ?>/css/header.min.css',
+                            id: 'desktop-0'
+                        },
+                        {
+                            href: '<?php echo $local ?>/css/footer.min.css',
+                            id: 'desktop-1'
+                        },
+                        // {
+                        //     href: 'css/footerPC.min.css',
+                        //     id: 'desktop-2'
+                        // },
+
+                    ];
+                    desktopLink.forEach(({
+                        href,
+                        id
+                    }) => {
+                        const link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.href = href;
+                        link.id = id;
+                        document.head.appendChild(link);
+                    });
+                }
+            }
+
+            updateHeaderStylesheet();
+
+          
+
+            
+            window.addEventListener('resize', () => {
+                console.log('Window resized to:', window.innerWidth);
+                updateHeaderStylesheet();
+              
+            });
+        });
+    </script>

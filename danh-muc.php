@@ -14,15 +14,10 @@ $page = isset($query_params['page']) ? $query_params['page'] : 1;
 $getDanhMucBenhByKhoa = $khoas->getDanhMucBenhByKhoa($khoa_slug);
 
 //danh sách bài viết theo slug bệnh
-// Số bài viết trên mỗi trang
 $limit = 5;
-// Trang hiện tại
-// Tính toán offset
 $offset = ($page - 1) * $limit;
-
 // Lấy danh sách bài viết theo phân trang
 $list_BV_pagination = $post->getPagingBaiVietTheoBenh($benh_slug, $limit, $offset);
-
 // Lấy tổng số bài viết
 $total_articles = $post->getTotalCountById($benh_slug);
 // Tính toán tổng số trang
@@ -100,9 +95,8 @@ $total_pages = ceil($total_articles / $limit);
                                     <?php echo $item['descriptions'] ?>
                                 </div>
                                 <div class="danhmuc__right-card-right-footer">
-                                    <a class="danhmuc__right-card-right-footer-button" href="<?php echo $local ?>">hỏi bác
-                                        sĩ</a>
-                                    <a class="danhmuc__right-card-right-footer-button1" href="<?php echo $local ?>/<?php echo $value['slug'] ?>/<?php echo $item['slug'] ?>">chi tiết</a>
+                                    <a class="danhmuc__right-card-right-footer-button" href="<?php echo $local ?>">hỏi bác sĩ</a>
+                                    <a class="danhmuc__right-card-right-footer-button1" href="<?php echo $local ?>/<?php echo $khoa_slug ?>/<?php echo $item['slug'] ?>.html">chi tiết</a>
                                 </div>
                             </div>
                         </div>
