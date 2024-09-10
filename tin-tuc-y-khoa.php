@@ -3,7 +3,20 @@
 </head>
 
 <?php
-    $getByIdTT = $tin_tuc->getOneLimitTinTuc();
+    $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+    $current_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $parsed_url = parse_url($current_url);
+    
+    $path = parse_url($parsed_url['path'], PHP_URL_PATH); // Lấy phần path từ URL
+    $filename = basename($path, ".html"); // Lấy tên file và loại bỏ .html
+
+    $getByIdTT = null;
+    if($filename === 'tin-tuc-y-khoa'){
+        $getByIdTT = $tin_tuc->getOneLimitTinTuc();
+    }else {
+        $getByIdTT = $tin_tuc->getByslug_tintuc($filename);
+    }
+    
 ?>
 
 <body>
