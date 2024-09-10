@@ -3,16 +3,7 @@
 </head>
 
 <?php
-$current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
-$current_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$parsed_url = parse_url($current_url);
-
-$path = parse_url($parsed_url['path'], PHP_URL_PATH); // Lấy phần path từ URL
-$filename = basename($path, ".html"); // Lấy tên file và loại bỏ .html
-
-$getDanhMucBenhByBaiViet = $khoas->getDanhMucBenhByBaiViet($filename);
-$getActiveByBenh = $benh->getActiveByBenh($filename);
-$get_post_detail = $post->getBaiViet_bySlug($filename);
+    $getByIdTT = $tin_tuc->getOneLimitTinTuc();
 ?>
 
 <body>
@@ -21,19 +12,7 @@ $get_post_detail = $post->getBaiViet_bySlug($filename);
         <?php include 'layout/slider_component.php' ?>
         <div class="danhmuc">
             <div class="danhmuc__left">
-                <?php foreach ($getDanhMucBenhByBaiViet as $value): ?>
-                    <span class="danhmuc__left-span"><?php echo $value['name'] ?></span>
-                    <ul class="danhmuc__left-ul">
-                        <?php foreach ($value['danhSachBenh'] as $benh): ?>
-                            <li
-                                class="danhmuc__left-li <?php echo ($getActiveByBenh['slug'] === $benh['slug']) ? 'danhmuc__left-li-active' : ''; ?>">
-                                <a
-                                    href="<?php echo $local ?>/danh-muc.php?khoa=<?php echo $value['slug'] ?>&benh=<?php echo $benh['slug'] ?>&page=1"><?php echo $benh['name']; ?></a>
-                            </li>
-                        <?php endforeach; ?>
-
-                    </ul>
-                <?php endforeach; ?>
+               
                 <div class="danhmuc__left-div" >
 
                 
@@ -74,13 +53,13 @@ $get_post_detail = $post->getBaiViet_bySlug($filename);
                 ?>
 
                     <a class="chinh-sua"
-                        href="<?php echo $local ?>/admin/bai-viet-edit.php?edit=<?php echo $get_post_detail['id'] ?>"><i
+                        href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo $getByIdTT['id'] ?>"><i
                             style="font-size:19px" class="bx bxs-pencil"></i>chỉnh sửa</a>
 
                 <?php } ?>
-                <div class="danhmuc__right-title"><?php echo $get_post_detail['tieu_de'] ?></div>
+                <div class="danhmuc__right-title"><?php echo $getByIdTT['tieu_de'] ?></div>
                 <hr>
-                <div class="danhmuc__right-content" id="bai-viet"> <?php echo htmlspecialchars_decode($get_post_detail['content']); ?> </div>
+                <div class="danhmuc__right-content" id="bai-viet"> <?php echo htmlspecialchars_decode($getByIdTT['content']); ?> </div>
             </div>
         </div>
     </main>

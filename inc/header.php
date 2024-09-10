@@ -7,6 +7,7 @@ Session::init();
 include_once 'classes/khoa.php';
 include_once 'classes/benh.php';
 include_once 'classes/bai_viet.php';
+include_once 'classes/tin_tuc.php';
 
 spl_autoload_register(function ($className) {
     include_once "classes/" . $className . ".php";
@@ -15,6 +16,7 @@ spl_autoload_register(function ($className) {
 $khoas = new Khoa();
 $post = new post();
 $benh = new Benh();
+$tin_tuc = new news();
 
 $getAllChiTietKhoaAndBenh = $khoas->getAllChiTietKhoaAndBenh();
 ?>
