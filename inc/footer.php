@@ -1,4 +1,4 @@
-<footer class="footer" id="footer_pc">
+<!-- <footer class="footer" id="footer_pc">
     <div class="footer__support">
         <div class="footer__support-body">
             <h5>BẠN CẦN HỖ TRỢ?</h5>
@@ -68,7 +68,7 @@
     <div class="footer__copyRight" >
     <div>Copyright © <?php echo date('Y'); ?> JV Nhật Việt</div>
     </div>
-</footer>
+</footer> -->
 
 
 <script async src="<?php echo $local ?>/js/cdn_image.min.js"></script>
@@ -85,10 +85,10 @@
 
             if (window.innerWidth < 1000) {
                 const mobileScripts = [
-                    // {
-                    //     src: 'js/slider_feedback.min.js',
-                    //     id: 'mobile-0'
-                    // },
+                    {
+                        src: '<?php echo $local ?>/js/mobile.min.js',
+                        id: 'mobile-0'
+                    },
                     // {
                     //     src: 'js/siderbar_mobile.min.js',
                     //     id: 'mobile-1'

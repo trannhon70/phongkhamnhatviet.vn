@@ -4,10 +4,12 @@
 
 <body>
     <?php include 'layout/header_component.php' ?>
-    <main>
+    
+   <main>
+        <?php include 'mobile/appointment_mobile.php' ?>
         <?php include 'layout/slider_component.php' ?>
 
-        <section id="we__bring" class="we__bring">
+        <!--  <section id="we__bring" class="we__bring">
             <div class="we__bring-body">
                 <div class="we__bring-list">
                     <div class="we__bring-item">
@@ -144,7 +146,6 @@
 
         </section>
         <section class="advise" id="advise">
-            <!-- <img style=" width:100%" height="90px" src="<?php echo $local ?>/images/banner/bg-03.webp" alt=""> -->
             <div class="advise__row ">
                 <div class="advise__row-left ">nhận tư vấn sức khỏe từ
                     các chuyên gia của chúng tôi</div>
@@ -344,7 +345,7 @@
                 </div>
             </div>
         </section>
-    </main>
+    </main> -->
 
     <script>
     const feedbacks = document.querySelectorAll('.feedback__container-row-card');

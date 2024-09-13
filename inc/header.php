@@ -19,6 +19,8 @@ $benh = new Benh();
 $tin_tuc = new news();
 
 $getAllChiTietKhoaAndBenh = $khoas->getAllChiTietKhoaAndBenh();
+$getMenuMobile = $benh->getMenuMobile();
+// var_dump($getMenuMobile);
 ?>
 
 
@@ -28,7 +30,7 @@ header("Pragma: no-cache");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: max-age=2592000");
 
-$local = 'http://localhost/newphongkhamdakhoanhatviet.vn';
+$local = 'http://localhost/phongkhamdakhoanhatvietnew.vn';
 // $local ='https://phongkhamdakhoanhatviet.vn'
 ?>
 <!DOCTYPE html>
@@ -125,14 +127,14 @@ $local = 'http://localhost/newphongkhamdakhoanhatviet.vn';
                 // Thêm stylesheet mới dựa trên kích thước cửa sổ
                 if (window.innerWidth < 1000) {
                     const mobileLink = [
-                        // {
-                        //     href: 'css/header_mobile.min.css',
-                        //     id: 'mobile-0'
-                        // },
-                        // {
-                        //     href: 'css/foooter_mobile.min.css',
-                        //     id: 'mobile-1'
-                        // },
+                        {
+                            href: 'css/header-mobile.min.css',
+                            id: 'mobile-0'
+                        },
+                        {
+                            href: 'css/appointment-mobile.min.css',
+                            id: 'mobile-1'
+                        },
 
                     ];
                     mobileLink.forEach(({
