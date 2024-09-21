@@ -1,5 +1,5 @@
 <section class="appointment" id="appointment_mobile" >
-    <div class="appointment__mobile-form" >
+    <div id="form-chatMobile" class="appointment__mobile-form" >
         <div class="appointment__mobile-form-body" >
             <div class="appointment__mobile-form-title" >Đặt lịch khám</div>
             <div class="appointment__mobile-form-input">
@@ -16,14 +16,14 @@
             </div> 
             <div class="appointment__mobile-form-row" >
                 <div class="appointment__mobile-form-col" >
-                    <input type="date">
+                    <input name="ngaykham" type="date" placeholder="Ngày khám" >
                 </div>
                 <div class="appointment__mobile-form-col" >
-                    <input type="text">
+                    <input name="giokham"  type="text" placeholder="Giờ khám" >
                 </div>
             </div>     
             <div class="appointment__mobile-form-button" >
-                <button>GỬI</button>
+                <button name="LKMobile" >GỬI</button>
             </div>                  
         </div>
     </div>

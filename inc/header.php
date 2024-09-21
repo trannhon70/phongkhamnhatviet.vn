@@ -128,12 +128,16 @@ $local = 'http://localhost/phongkhamdakhoanhatvietnew.vn';
                 if (window.innerWidth < 1000) {
                     const mobileLink = [
                         {
-                            href: 'css/header-mobile.min.css',
+                            href: '<?php echo $local ?>/css/header-mobile.min.css',
                             id: 'mobile-0'
                         },
                         {
-                            href: 'css/appointment-mobile.min.css',
+                            href: '<?php echo $local ?>/css/appointment-mobile.min.css',
                             id: 'mobile-1'
+                        },
+                        {
+                            href: '<?php echo $local ?>/css/footer-mobile.min.css',
+                            id: 'mobile-2'
                         },
 
                     ];

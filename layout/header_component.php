@@ -86,10 +86,10 @@
             <amp-img onclick="hidenSidebar()" class="header__mobile-top-left-icon-close" src="<?php echo $local ?>/images/icons/icon_close.webp" height="25px" width="25px" alt="..."></amp-img>
         </div>
         <div class="header__mobile-top-center">
-            <input type="number" placeholder="Nhập số điện thoại">
+            <input id="sdt_mobile" type="number" placeholder="Nhập số điện thoại">
         </div>
         <div class="header__mobile-top-left">
-            <button>Xác Nhận</button>
+            <button onclick="onClickCreatePhone()">Xác Nhận</button>
         </div>
     </div>
     <div class="header__mobile-row">
@@ -185,4 +185,7 @@
             });
         });
     });
+
+    
 </script>
+

@@ -9,7 +9,7 @@
         <?php include 'mobile/appointment_mobile.php' ?>
         <?php include 'layout/slider_component.php' ?>
 
-        <!--  <section id="we__bring" class="we__bring">
+       <section id="we__bring" class="we__bring">
             <div class="we__bring-body">
                 <div class="we__bring-list">
                     <div class="we__bring-item">
@@ -60,10 +60,10 @@
                 </div>
             </div>
         </section>
-        <section id="experienced" class="experienced">
+          <section id="experienced" class="experienced">
             <div class="experienced__row">
                 <div class="experienced__row-left">
-                    <div class="experienced__row-left-title">
+                  <div class="experienced__row-left-title">
                         VỀ CHÚNG TÔI
                     </div>
                     <div class="experienced__row-left-title1">
@@ -72,12 +72,15 @@
                     <div class="experienced__row-left-text">
                         Y, Bác sĩ của phòng khám đều là những nhân tố giỏi. Họ đã từng công tác tại nhiều bệnh viện lớn trong cả nước. Mỗi chuyên gia đảm nhận một chuyên khoa riêng biệt. Chính điều này sẽ giúp quá trình khám chữa bệnh đạt kết quả tối ưu.
                     </div>
-                    <div class="experienced__row-left-center">
+                     <div class="experienced__row-left-center">
                         <button>CHUYÊN NGHIỆP</button>
                         <button>TẬN TÂM</button>
                         <button>KINH NGHIỆM</button>
                     </div>
-                    <div class="experienced__row-left-bottom">
+                    <div class="experienced__row-left-img" >
+                        <img width="100%" height="auto" src="<?php echo $local ?>/images/logo/vong-tron.webp" alt="...">
+                    </div> 
+                   <div class="experienced__row-left-bottom">
                         <div class="experienced__row-left-bottom-item">
                             <div>
                                 <amp-img class="experienced__row-left-bottom-item-img" src="<?php echo $local ?>/images/icons/icon_check.webp" height="33px" width="40px" alt="..."></amp-img>
@@ -91,7 +94,7 @@
                             <span>Chuyên môn cao, tâm huyết lớn</span>
                         </div>
 
-                    </div>
+                    </div> 
                     <div class="experienced__row-left-bottom">
                         <div class="experienced__row-left-bottom-item">
                             <div>
@@ -144,8 +147,38 @@
                 </div>
             </div>
 
-        </section>
-        <section class="advise" id="advise">
+           <div class="experienced__bottom-mobile"  >
+                <span class="experienced__bottom-mobile-title" >ĐỘI NGŨ BÁC SĨ GIỎI</span>       
+                <div class="experienced__bottom-mobile-card activeexperienced" >
+                    <img width="56%" height="auto" src="<?php echo $local ?>/images/users/user_1.webp" alt="...">
+                    <div class="experienced__bottom-mobile-text">Lê Bản Bình</div>
+                    <div class="experienced__bottom-mobile-text1">CK: Ngoại Khoa</div>
+                </div>
+                <div class="experienced__bottom-mobile-card" >
+                    <img width="56%" height="auto" src="<?php echo $local ?>/images/users/user_2.webp" alt="...">
+                    <div class="experienced__bottom-mobile-text">Nguyễn Thị Tuyết</div>
+                    <div class="experienced__bottom-mobile-text1">CK: Siêu âm</div>
+                </div>
+                <div class="experienced__bottom-mobile-card" >
+                    <img width="56%" height="auto" src="<?php echo $local ?>/images/users/user_3.webp" alt="...">
+                    <div class="experienced__bottom-mobile-text"> Ngô minh tài</div>
+                    <div class="experienced__bottom-mobile-text1">CK: Xét nghiệm</div>
+                </div>
+                <div class="experienced__bottom-mobile-card" >
+                    <img width="56%" height="auto" src="<?php echo $local ?>/images/users/user_4.webp" alt="...">
+                    <div class="experienced__bottom-mobile-text"> Trần gia phú</div>
+                    <div class="experienced__bottom-mobile-text1">CK: Phục hồi chức năng</div>
+                </div>
+           </div>
+            <div class="index-experienced">
+                <div class="experienced-item experienced-item-0 activeexperienced"></div>
+                <div class="experienced-item experienced-item-1 "></div>
+                <div class="experienced-item experienced-item-2"></div>
+                <div class="experienced-item experienced-item-3"></div>
+            </div>
+
+       </section>
+       <section class="advise" id="advise">
             <div class="advise__row ">
                 <div class="advise__row-left ">nhận tư vấn sức khỏe từ
                     các chuyên gia của chúng tôi</div>
@@ -213,7 +246,7 @@
             </div>
         </section>
 
-        <section class="procedure" id="procedure">
+         <section class="procedure" id="procedure">
             <div class=" procedure__container">
                 <div class="procedure__container-title">
                     quy trình
@@ -345,7 +378,7 @@
                 </div>
             </div>
         </section>
-    </main> -->
+    </main>
 
     <script>
     const feedbacks = document.querySelectorAll('.feedback__container-row-card');
@@ -367,6 +400,8 @@
     };
     showFeedback(currentIndex); // Initialize the first feedback as active
     setInterval(handleChangeSlideFeedback, 4000);
+
+   
 </script>
 
     <script>
