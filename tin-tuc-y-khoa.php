@@ -52,8 +52,12 @@
 
                 <?php } ?>
                 <div class="danhmuc__right-title"><?php echo $getByIdTT['tieu_de'] ?></div>
+                <div id="bg_mobile_km">
+                    <img width="100%" height="auto" src="<?php echo $local ?>/images/logo_mobile/bg_mobile_km.gif" alt="...">
+                </div>
                 <hr>
                 <div class="danhmuc__right-content" id="bai-viet"> <?php echo htmlspecialchars_decode($getByIdTT['content']); ?> </div>
+                <?php include 'mobile/appointment_mobile.php' ?>
             </div>
         </div>
     </main>
