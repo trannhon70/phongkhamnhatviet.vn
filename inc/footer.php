@@ -122,9 +122,7 @@
  <script src="<?php echo $local ?>/js/jquery-3.7.1.min.js"></script>
  <script async src="<?php echo $local ?>/js/toastr.min.js"></script>
  <script async src="<?php echo $local ?>/js/random_number.min.js"></script>
- <script>
-     
- </script>
+
  <script>
      document.addEventListener('DOMContentLoaded', () => {
          function updateHeaderScripts() {

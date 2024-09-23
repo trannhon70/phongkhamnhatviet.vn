@@ -86,11 +86,14 @@ body {
 #slider,
 #footer_pc,
 #footer__mobile,
+#danhmuc_ds,
+#danhmuc_dspc,
 .experienced__row-left-center > button,
 .experienced__row-left-img,
 .experienced__row-right,
 .experienced__bottom,
 .experienced__bottom-mobile
+
 {
     display: none;
 }
@@ -117,6 +120,10 @@ body {
     #footer_pc{
         display: var(--display-block);
     }
+
+    #danhmuc_ds{
+        display: var(--display-flex);
+    }
 }
 
 
@@ -137,6 +144,10 @@ body {
     }
 
     #footer__mobile{
+        display: var(--display-block);
+    }
+
+    #danhmuc_dspc{
         display: var(--display-block);
     }
   }

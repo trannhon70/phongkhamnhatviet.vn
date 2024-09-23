@@ -280,3 +280,129 @@
     justify-content: var(--justify-content-center);
     gap: 100px;
 }
+
+/* mobile */
+@media only screen and (max-width: 999px) {
+
+    .danhmuc_mobile-title{
+        border-top: 1px solid var(--color-01969A);
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-700);
+        color: var(--color-01969A);
+        text-transform: var(--text-tranform-uppercase);
+        padding: 5px 0px 5px 10px;
+        box-sizing: border-box;
+    }
+    
+    .danhmuc_mobile-title1{
+        background-color: #6ACFF5;
+        font-size: var(--font-size-20);
+        color: var(--color-white);
+        font-weight: var(--font-weight-700);
+        text-transform: var(--text-tranform-uppercase);
+        padding: 5px 0px 5px 10px;
+        box-sizing: border-box;
+    }
+
+    .danhmuc_mobile-list{
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    .danhmuc_mobile-card{
+        display: var(--display-flex);
+        box-sizing: border-box;
+        gap: 10px;
+        margin: 10px 0px;
+        border-bottom: 2px dashed var(--color-01969A);
+        padding-bottom: 5px;
+    }
+    
+    .danhmuc_mobile-card-left{
+        width: 20%;
+        height: auto;
+        border: 1px solid var(--color-01969A);
+        border-radius: 8px;
+        min-height: 66px;
+    }
+    
+    .danhmuc_mobile-card-left>img {
+        width: 100%;
+        min-height: 66px;
+        border-radius: 8px;
+    }
+
+    .danhmuc_mobile-card-right{
+        width: 80%;
+  
+    }
+    
+    .danhmuc_mobile-card-right > h5 {
+        font-size: var(--font-size-14);
+        font-weight: var(--font-weight-700);
+        line-height: 20px;
+        color: rgba(0, 96, 167, 1);
+        text-transform: var(--text-tranform-capitalize);
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        white-space: normal;
+        height: 44px;
+    }
+
+    .danhmuc_mobile-card-right > div{
+        display: var(--display-flex);
+        align-items: var(--align-item-center);
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .danhmuc_mobile-card-right-bs{
+        width: 50%;
+        height: 25px;
+        cursor: var(--cursor-pointer);
+        font-size: var(--font-size-12);
+        font-weight: var(--font-weight-700);
+        display: var(--display-flex);
+        align-items: var(--align-item-center);
+        justify-content: var(--justify-content-center);
+        text-decoration: var(--text-decoration-none);
+        color: var(--color-white);
+        background: linear-gradient(to right, var(--color-01969A), var(--color-50e2e7));
+        border-radius: 25px;
+    }
+
+    .danhmuc_mobile-card-right-chi-tiet{
+        width: 50%;
+        height: 25px;
+        cursor: var(--cursor-pointer);
+        font-size: var(--font-size-12);
+        font-weight: var(--font-weight-700);
+        display: var(--display-flex);
+        align-items: var(--align-item-center);
+        justify-content: var(--justify-content-center);
+        text-decoration: var(--text-decoration-none);
+        color: var(--color-01969A);
+        background: var(--background-color-white);
+        border-radius: 25px;
+        border: 1px solid var(--color-01969A);
+    }
+
+    .danhmuc__right-paging{
+        margin-top: 0px;
+    }
+
+    .danhmuc__right-paging-number{
+        width: 25px;
+        height: 25px;
+        font-size: var(--font-size-14);
+    }
+
+    .danhmuc__right-paging-prev{
+        width: 25px;
+        height: 25px;
+    }
+}
+

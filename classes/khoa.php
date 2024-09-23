@@ -143,8 +143,33 @@ include_once($filepath . '/../helpers/format.php');
         // Trả về mảng kết quả cuối cùng
         return $data;
     }
+    public function getTTBenhAndKhoa($khoa_slug, $benh_slug){
+        // Sử dụng mysqli_real_escape_string để tránh SQL injection
+        $khoa_slug = mysqli_real_escape_string($this->db->link, $khoa_slug);
+        $benh_slug = mysqli_real_escape_string($this->db->link, $benh_slug);
+    
+        $queryKhoa = "SELECT name FROM `admin_khoa` WHERE slug = '$khoa_slug' LIMIT 1";
+        $resultKhoa = $this->db->select($queryKhoa);
+        $data = []; 
+        if ($resultKhoa) {
+            $khoa = $resultKhoa->fetch_assoc();  
+            $queryBenh = "SELECT name FROM `admin_benh` WHERE slug = '$benh_slug' LIMIT 1";
+            $resultBenh = $this->db->select($queryBenh);
+            if ($resultBenh) {
+                $benh = $resultBenh->fetch_assoc(); 
+                $data = [
+                    'khoa' => $khoa['name'],  
+                    'benh' => $benh['name']  
+                ];
+            }
+        }
+    
+        return $data;  
+    }
     
     
   }
+
+  
   
 ?>
