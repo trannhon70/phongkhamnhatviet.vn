@@ -55,27 +55,27 @@ if (Session::get('role') === '1') {
                 if (formData.password === formData.confirm_password) {
                     
                     try {
-                        let response1 = await postData("https://phongkhamdakhoanhatviet.vn/api/user/update-password.php", formData);
+                        let response1 = await postData("https://phongkhamnhatviet.vn/api/user/update-password.php", formData);
                         if (response1.status === 'success') {
                             toastr.success(response1.message);
                             clearInputs(inputs);
 
-                            let response2 = await postData("https://namkhoa.phongkhamdakhoanhatviet.vn/api/user/update-password.php", formData);
+                            let response2 = await postData("https://namkhoa.phongkhamnhatviet.vn/api/user/update-password.php", formData);
                             if (response2.status === 'success') {
                                 // toastr.success(response2.message);
 
-                                let response3 = await postData("https://haumontructrang.phongkhamdakhoanhatviet.vn/api/user/update-password.php", formData);
+                                let response3 = await postData("https://haumontructrang.phongkhamnhatviet.vn/api/user/update-password.php", formData);
                                 if (response3.status === 'success') {
                                     // toastr.success(response3.message);
 
-                                    let response4 = await postData("https://dalieu.phongkhamdakhoanhatviet.vn/api/user/update-password.php", formData);
+                                    let response4 = await postData("https://dalieu.phongkhamnhatviet.vn/api/user/update-password.php", formData);
                                     if (response4.status === 'success') {
                                         // toastr.success(response4.message);
 
-                                        let response5 = await postData("https://benhxahoi.phongkhamdakhoanhatviet.vn/api/user/update-password.php", formData);
+                                        let response5 = await postData("https://benhxahoi.phongkhamnhatviet.vn/api/user/update-password.php", formData);
                                         if (response5.status === 'success') {
                                             // toastr.success(response5.message);
-                                            let response6 = await postData("https://dakhoa.phongkhamdakhoanhatviet.vn/api/user/update-password.php", formData);
+                                            let response6 = await postData("https://dakhoa.phongkhamnhatviet.vn/api/user/update-password.php", formData);
                                         } else {
                                             // toastr.error(response5.message);
                                         }

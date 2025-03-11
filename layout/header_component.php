@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border">
-                    <a class="" target="_blank" href="https://phongkhamdakhoanhatviet.vn/phong-kham-da-nhat-viet-phong-kham-da-khoa-uy-tin-tphcm-7.html">giới thiệu</a>
+                    <a class="" target="_blank" href="https://phongkhamnhatviet.vn/phong-kham-da-nhat-viet-phong-kham-da-khoa-uy-tin-tphcm-7.html">giới thiệu</a>
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border header__bottom-positon">
                     <a class="" href="<?php echo $local ?>">danh mục bệnh</a>

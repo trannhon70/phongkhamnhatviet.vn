@@ -214,11 +214,11 @@ if (Session::get('role') === '1') {
         try {
             // Gọi đồng thời 5 API
             let responses = await Promise.all([
-                postData("https://phongkhamdakhoanhatviet.vn/api/benh/update-hidden-benh.php", formData),
-                postData("https://namkhoa.phongkhamdakhoanhatviet.vn/api/benh/update-hidden-benh.php", formData),
-                postData("https://haumontructrang.phongkhamdakhoanhatviet.vn/api/benh/update-hidden-benh.php", formData),
-                postData("https://dalieu.phongkhamdakhoanhatviet.vn/api/benh/update-hidden-benh.php", formData),
-                postData("https://benhxahoi.phongkhamdakhoanhatviet.vn/api/benh/update-hidden-benh.php", formData)
+                postData("https://phongkhamnhatviet.vn/api/benh/update-hidden-benh.php", formData),
+                postData("https://namkhoa.phongkhamnhatviet.vn/api/benh/update-hidden-benh.php", formData),
+                postData("https://haumontructrang.phongkhamnhatviet.vn/api/benh/update-hidden-benh.php", formData),
+                postData("https://dalieu.phongkhamnhatviet.vn/api/benh/update-hidden-benh.php", formData),
+                postData("https://benhxahoi.phongkhamnhatviet.vn/api/benh/update-hidden-benh.php", formData)
             ]);
 
             let errorFound = responses.some(response => response.status !== 'success');

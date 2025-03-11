@@ -95,32 +95,32 @@ if (Session::get('role') === '1') {
 
                 try {
                     // First API endpoint
-                    let response1 = await postData("https://phongkhamdakhoanhatviet.vn/api/user/create-user.php", formData);
+                    let response1 = await postData("https://phongkhamnhatviet.vn/api/user/create-user.php", formData);
                     if (response1.status === 'success') {
                         toastr.success(response1.message);
                         // Clear inputs after success
                         clearInputs(inputs);
 
                         // Second API endpoint
-                        let response2 = await postData("https://namkhoa.phongkhamdakhoanhatviet.vn/api/user/create-user.php", formData);
+                        let response2 = await postData("https://namkhoa.phongkhamnhatviet.vn/api/user/create-user.php", formData);
                         if (response2.status === 'success') {
                             toastr.success(response2.message);
 
                             // Third API endpoint
-                            let response3 = await postData("https://haumontructrang.phongkhamdakhoanhatviet.vn/api/user/create-user.php", formData);
+                            let response3 = await postData("https://haumontructrang.phongkhamnhatviet.vn/api/user/create-user.php", formData);
                             if (response3.status === 'success') {
                                 toastr.success(response3.message);
 
                                 // Fourth API endpoint
-                                let response4 = await postData("https://dalieu.phongkhamdakhoanhatviet.vn/api/user/create-user.php", formData);
+                                let response4 = await postData("https://dalieu.phongkhamnhatviet.vn/api/user/create-user.php", formData);
                                 if (response4.status === 'success') {
                                     toastr.success(response4.message);
 
                                     // Fifth API endpoint
-                                    let response5 = await postData("https://benhxahoi.phongkhamdakhoanhatviet.vn/api/user/create-user.php", formData);
+                                    let response5 = await postData("https://benhxahoi.phongkhamnhatviet.vn/api/user/create-user.php", formData);
                                     if (response5.status === 'success') {
                                         toastr.success(response5.message);
-                                        let response6 = await postData("https://dakhoa.phongkhamdakhoanhatviet.vn/api/user/create-user.php", formData);
+                                        let response6 = await postData("https://dakhoa.phongkhamnhatviet.vn/api/user/create-user.php", formData);
                                         if (response6.status === 'success') {
                                             toastr.success(response6.message);
                                             
