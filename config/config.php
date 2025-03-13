@@ -6,7 +6,7 @@
 
 
 define("DB_HOST", "localhost");
-define("DB_USER", "phon_p_k_nhatviet");
-define("DB_PASS", "JofzBxA3fIByy0vv");
-define("DB_NAME", "phon_p_k_nhatviet");   
+define("DB_USER", "phongkhamnhatvie");
+define("DB_PASS", "EkGpWz624BASCfTy");
+define("DB_NAME", "phongkhamnhatvie");   
 ?>

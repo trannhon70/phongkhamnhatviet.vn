@@ -116,7 +116,7 @@
          </a>
     </div>
 </div>
-<?php include "layout/modelThongBao.php" ?>
+<!-- <?php include "layout/modelThongBao.php" ?> -->
 
  <script async src="<?php echo $local ?>/js/cdn_image.min.js"></script>
  <script src="<?php echo $local ?>/js/jquery-3.7.1.min.js"></script>
