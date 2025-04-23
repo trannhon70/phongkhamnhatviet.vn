@@ -16,28 +16,28 @@
                         <amp-img class="we__bring-item-logo" src="<?php echo $local ?>/images/icons/icon_nam_khoa2.webp" height="260px" width="125px" alt="..."></amp-img>
                         <div class="we__bring-item-body">
                             <h5>NAM KHOA</h5>
-                            <span>Chuyên khoa Nam khoa, Phòng khám Đa khoa Nhật Việt luôn được chú trọng phát triển, nhằm mang lại chất lượng và sự hài lòng nhất cho quý nam giới.</span>
+                            <span>Chuyên khoa Nam khoa, Phòng khám Nhật Việt luôn được chú trọng phát triển, nhằm mang lại chất lượng và sự hài lòng nhất cho quý nam giới.</span>
                         </div>
                     </div>
                     <div class="we__bring-item">
                         <amp-img class="we__bring-item-logo" src="<?php echo $local ?>/images/icons/icon_da_lieu2.webp" height="260px" width="125px" alt="..."></amp-img>
                         <div class="we__bring-item-body">
                             <h5>DA LIỄU</h5>
-                            <span>Chuyên khoa Da liễu Phòng khám Đa khoa Nhật Việt là đơn vị đảm nhận chẩn đoán và điều trị các bệnh lý thuộc chuyên ngành Da liễu.</span>
+                            <span>Chuyên khoa Da liễu Phòng khám Nhật Việt là đơn vị đảm nhận chẩn đoán và điều trị các bệnh lý thuộc chuyên ngành Da liễu.</span>
                         </div>
                     </div>
                     <div class="we__bring-item">
                         <amp-img class="we__bring-item-logo" src="<?php echo $local ?>/images/icons/icon_benh_xh2.webp" height="260px" width="125px" alt="..."></amp-img>
                         <div class="we__bring-item-body">
                             <h5>BỆNH XÃ HỘI</h5>
-                            <span>Đa khoa Nhật Việt là một trong những địa chỉ thăm khám, xét nghiệm và điều trị bệnh xã hội uy tín tại TPHCM được người dân thành phố và khu vực tin chọn.</span>
+                            <span>Phòng khám Nhật Việt là một trong những địa chỉ thăm khám, xét nghiệm và điều trị bệnh xã hội uy tín tại TPHCM được người dân thành phố và khu vực tin chọn.</span>
                         </div>
                     </div>
                     <div class="we__bring-item">
                         <amp-img class="we__bring-item-logo" src="<?php echo $local ?>/images/icons/icon_hm_tt2.webp" height="260px" width="125px" alt="..."></amp-img>
                         <div class="we__bring-item-body">
                             <h5>HẬU MÔN - TRỰC TRÀNG</h5>
-                            <span>Khoa Hậu môn – Trực tràng Phòng khám Đa khoa Nhật Việt chuyên cung cấp dịch vụ khám chữa toàn diện các bệnh lý hậu môn – trực tràng uy tín.</span>
+                            <span>Khoa Hậu môn – Trực tràng Phòng khám Nhật Việt chuyên cung cấp dịch vụ khám chữa toàn diện các bệnh lý hậu môn – trực tràng uy tín.</span>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                             CHÚNG TÔI MANG ĐẾN
                         </div>
                         <div class="we__bring-row-right-text">
-                            Đa Khoa Nhật Việt luôn nỗ lực để xây dựng một thương hiệu chăm sóc sức khỏe với hàm lượng tri thức, khoa học và công nghệ ở mức cao. Mỗi dịch vụ y tế đều hướng tới tính tiện ích, hiệu quả, có ý nghĩa với cuộc sống và sức khỏe con người.
+                            Phòng khám Nhật Việt luôn nỗ lực để xây dựng một thương hiệu chăm sóc sức khỏe với hàm lượng tri thức, khoa học và công nghệ ở mức cao. Mỗi dịch vụ y tế đều hướng tới tính tiện ích, hiệu quả, có ý nghĩa với cuộc sống và sức khỏe con người.
                         </div>
                         <button class="we__bring-row-right-button">
                             XEM TẤT CẢ CÁC DỊCH VỤ CỦA CHÚNG TÔI
@@ -318,7 +318,7 @@
                             </div>
                         </div>
                         <div class="feedback__container-row-card-bottom">
-                            “Mình bị viêm da cũng khá nặng, đã chữa trị nhiều nơi nhưng không khỏi. Mình biết đến Phòng khám Đa khoa Nhật Việt qua một người bạn. Khi mình đến khám, bác sĩ và nhân viên phòng khám hướng dẫn mình rất chi tiết trong từng hạng mục.”
+                            “Mình bị viêm da cũng khá nặng, đã chữa trị nhiều nơi nhưng không khỏi. Mình biết đến Phòng khám Nhật Việt qua một người bạn. Khi mình đến khám, bác sĩ và nhân viên phòng khám hướng dẫn mình rất chi tiết trong từng hạng mục.”
                         </div>
                     </div>
 
@@ -343,7 +343,7 @@
                             </div>
                         </div>
                         <div class="feedback__container-row-card-bottom">
-                        “Theo Hải thì chất lượng phòng khám là khỏi chê, đội ngũ nhân viên y, bác sĩ rất thân thiện và nhiệt tình. Thời gian trả kết quả cũng rất nhanh, cái chính là an toàn và bảo mật. Đây là điều mà Hải cảm thấy hài lòng nhất, xin cám ơn Đa khoa Nhật Việt!”
+                        “Theo Hải thì chất lượng phòng khám là khỏi chê, đội ngũ nhân viên y, bác sĩ rất thân thiện và nhiệt tình. Thời gian trả kết quả cũng rất nhanh, cái chính là an toàn và bảo mật. Đây là điều mà Hải cảm thấy hài lòng nhất, xin cám ơn Phòng khám Nhật Việt!”
                         </div>
                     </div>
 
@@ -367,7 +367,7 @@
                             </div>
                         </div>
                         <div class="feedback__container-row-card-bottom">
-                        “Công việc của Hiếu khá bận nên thời gian rảnh rất ít. Do đó Hiếu đã chọn thăm khám nam khoa tại Đa Khoa Nhật Việt qua Đặt hẹn Online.”
+                        “Công việc của Hiếu khá bận nên thời gian rảnh rất ít. Do đó Hiếu đã chọn thăm khám nam khoa tại Phòng khám Nhật Việt qua Đặt hẹn Online.”
                         </div>
                     </div>
                 </div>

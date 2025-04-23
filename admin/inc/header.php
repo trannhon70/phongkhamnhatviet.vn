@@ -9,8 +9,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     Session::destroy();
 }
 
-// $local = 'http://localhost/newphongkhamnhatviet.vn';
-$local = 'https://phongkhamnhatviet.vn';
+$local = 'http://localhost/newphongkhamnhatviet.vn';
+// $local = 'https://phongkhamnhatviet.vn';
 ?>
 
 <?php
@@ -95,7 +95,7 @@ header("Cache-Control: max-age=2592000");
         <aside id="sidebar">
             <div class="d-flex mt-3" style="margin-left: 24px;">
                 <div class="sidebar-logo">
-                    <a href="<?php echo $local ?>/admin">PK Đa Khoa</a>
+                    <a href="<?php echo $local ?>/admin">Phòng khám Nhật Việt</a>
                 </div>
             </div>
             <ul class="sidebar-nav">

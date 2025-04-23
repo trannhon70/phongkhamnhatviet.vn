@@ -50,7 +50,7 @@
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border header__bottom-positon">
                     <a class="" href="<?php echo $local ?>">danh mục bệnh</a>
-                    <div class="header__menu">
+                    <!-- <div class="header__menu">
                         <div></div>
                         <nav>
                             <?php foreach ($getAllChiTietKhoaAndBenh as $value) : ?>
@@ -66,7 +66,7 @@
                                 </ul>
                             <?php endforeach; ?>
                         </nav>
-                    </div>
+                    </div> -->
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border">
                     <a class="" href="<?php echo $local ?>/tin-tuc-y-khoa.html">tin tức y khoa</a>
@@ -82,8 +82,8 @@
 <header id="header__mobile" class="header__mobile">
     <div class="header__mobile-top">
         <div class="header__mobile-top-left">
-            <amp-img onclick="showSidebar()" class="header__mobile-top-left-icon" src="<?php echo $local ?>/images/icons/menu_white.webp" height="25px" width="25px" alt="..."></amp-img>
-            <amp-img onclick="hidenSidebar()" class="header__mobile-top-left-icon-close" src="<?php echo $local ?>/images/icons/icon_close.webp" height="25px" width="25px" alt="..."></amp-img>
+            <img loading="lazy" onclick="showSidebar()" class="header__mobile-top-left-icon" src="<?php echo $local ?>/images/icons/menu_white.webp" height="25px" width="25px" alt="..."></img>
+            <img loading="lazy" onclick="hidenSidebar()" class="header__mobile-top-left-icon-close" src="<?php echo $local ?>/images/icons/icon_close.webp" height="25px" width="25px" alt="..."></img>
         </div>
         <div class="header__mobile-top-center">
             <input id="sdt_mobile" type="number" placeholder="Nhập số điện thoại">
@@ -118,7 +118,7 @@
                     <span>danh mục bệnh</span>
                     <img src="<?php echo $local ?>/images/icons/icon_down.png" alt="">
                 </div>
-                <ul class="sidebar_mobile_li-option">
+                <!-- <ul class="sidebar_mobile_li-option">
                     <?php foreach ($getMenuMobile as $value) : ?>
                         <li class="sidebar_mobile_li-option-li">
                             <div data-option="<?php echo $value['id'] ?>" class="sidebar_mobile_li-option-li-div">
@@ -134,7 +134,7 @@
                             </ul>
                         </li>
                     <?php endforeach; ?>
-                </ul>
+                </ul> -->
             </li>
 
             <li>
