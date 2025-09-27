@@ -148,9 +148,10 @@ if ($filename === 'tin-tuc-y-khoa') {
                     }
 
                     //hiển thị css img chatbox
-                    // if (imgElements[i].src.startsWith('<?php echo $local ?>/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
                     if (imgElements[i].src.startsWith(
-                            'http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
+                            '<?php echo $local ?>/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
+                        // if (imgElements[i].src.startsWith(
+                        //         'http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
                         true) {
                         imgElements[i].style.borderRadius = '8px';
                         let divWrapper = document.createElement('p');
