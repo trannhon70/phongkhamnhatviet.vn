@@ -1,17 +1,26 @@
 <header id="header_pc" class="header">
     <div class="header__top">
         <div class="header__top-left">
-            <img class="header__top-left-logo" src="<?php echo $local ?>/images/logo/logo2.webp" height="70px" width="250px" alt="...">
+            <img loading="lazy" class="header__top-left-logo" src="<?php echo $local ?>/images/logo/logo2.webp"
+                height="70px" width="250px" alt="...">
         </div>
         <div class="header__top-list">
             <div class="header__top-list-item">
-                <div style="width: 35px;height: 35px;"> <amp-img class="header__top-list-item-icon" src="<?php echo $local ?>/images/icons/icon_phone.webp" height="35px" width="35px" alt="..."></amp-img></div>
+                <div style="width: 35px;height: 35px;">
+                    <img loading="lazy" class="header__top-list-item-icon"
+                        src="<?php echo $local ?>/images/icons/icon_phone.webp" height="35px" width="35px"
+                        alt="..."></img>
+                </div>
                 <div class="header__top-list-item-text">Đường dây nóng <br>
                     028-7776-7777
                 </div>
             </div>
             <div class="header__top-list-item">
-                <div style="width: 35px;height: 35px;"><amp-img class="header__top-list-item-icon" src="<?php echo $local ?>/images/icons/icon_user.webp" height="35px" width="35px" alt="..."></amp-img></div>
+                <div style="width: 35px;height: 35px;">
+                    <img loading="lazy" class="header__top-list-item-icon"
+                        src="<?php echo $local ?>/images/icons/icon_user.webp" height="35px" width="35px"
+                        alt="..."></img>
+                </div>
                 <div class="header__top-list-item-center">
                     <div class="header__top-list-item-center-top">Giờ làm việc
                         <br>
@@ -24,7 +33,9 @@
             </div>
             <div class="header__top-list-item">
                 <div style="width: 35px;height: 35px;">
-                    <amp-img class="header__top-list-item-icon" src="<?php echo $local ?>/images/icons/icon_location.webp" height="35px" width="35px" alt="..."></amp-img>
+                    <img loading="lazy" class="header__top-list-item-icon"
+                        src="<?php echo $local ?>/images/icons/icon_location.webp" height="35px" width="35px" alt="...">
+                    </img>
                 </div>
                 <div class="header__top-list-item-center">
                     <div class="header__top-list-item-center-top">Địa chỉ
@@ -42,11 +53,15 @@
             <ul class="header__bottom-nav-ul">
                 <li>
                     <a href="<?php echo $local ?>">
-                        <amp-img class="header__top-list-item-icon" src="<?php echo $local ?>/images/icons/icon_home.webp" height="35px" width="35px" alt="..."></amp-img>
+                        <img loading="lazy" class="header__top-list-item-icon"
+                            src="<?php echo $local ?>/images/icons/icon_home.webp" height="35px" width="35px" alt="...">
+                        </img>
                     </a>
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border">
-                    <a class="" target="_blank" href="https://phongkhamnhatviet.vn/phong-kham-da-nhat-viet-phong-kham-da-khoa-uy-tin-tphcm-7.html">giới thiệu</a>
+                    <a class="" target="_blank"
+                        href="https://phongkhamnhatviet.vn/phong-kham-da-nhat-viet-phong-kham-da-khoa-uy-tin-tphcm-7.html">giới
+                        thiệu</a>
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border header__bottom-positon">
                     <a class="" href="<?php echo $local ?>">danh mục bệnh</a>
@@ -82,8 +97,10 @@
 <header id="header__mobile" class="header__mobile">
     <div class="header__mobile-top">
         <div class="header__mobile-top-left">
-            <img loading="lazy" onclick="showSidebar()" class="header__mobile-top-left-icon" src="<?php echo $local ?>/images/icons/menu_white.webp" height="25px" width="25px" alt="..."></img>
-            <img loading="lazy" onclick="hidenSidebar()" class="header__mobile-top-left-icon-close" src="<?php echo $local ?>/images/icons/icon_close.webp" height="25px" width="25px" alt="..."></img>
+            <img loading="lazy" onclick="showSidebar()" class="header__mobile-top-left-icon"
+                src="<?php echo $local ?>/images/icons/menu_white.webp" height="25px" width="25px" alt="..."></img>
+            <img loading="lazy" onclick="hidenSidebar()" class="header__mobile-top-left-icon-close"
+                src="<?php echo $local ?>/images/icons/icon_close.webp" height="25px" width="25px" alt="..."></img>
         </div>
         <div class="header__mobile-top-center">
             <input id="sdt_mobile" type="number" placeholder="Nhập số điện thoại">
@@ -93,11 +110,13 @@
         </div>
     </div>
     <div class="header__mobile-row">
-        <a href="<?php echo $local ?>" class="header__mobile-row-left">
-            <img width="100%" height="40px" src="<?php echo $local ?>/images/logo_mobile/logo_mobile.webp" alt="">
+        <a href="<?php echo $local ?>" class="header__mobile-row-left" aria-label="logo_mobile">
+            <img loading="lazy" width="100%" height="40px"
+                src="<?php echo $local ?>/images/logo_mobile/logo_mobile.webp" alt="">
         </a>
         <a href="tel:+02877767777" class="header__mobile-row-right">
-            <amp-img class="header__mobile-row-right-icon" src="<?php echo $local ?>/images/icons/icon_phone_no.webp" height="30px" width="25px" alt="..."></amp-img>
+            <img loading="lazy" class="header__mobile-row-right-icon"
+                src="<?php echo $local ?>/images/icons/icon_phone_no.webp" height="30px" width="25px" alt="..."></img>
             <div class="header__mobile-row-right-hotline">
                 <div>TƯ VẤN TRỰC TUYẾN</div>
                 <span>028-7776-7777</span>
@@ -105,18 +124,20 @@
         </a>
     </div>
     <div class="header__mobile-banner">
-        <img width="100%" height="auto" src="<?php echo $local ?>/images/banner/mobile_banner.webp" alt="">
+        <img src="<?php echo $local ?>/images/banner/mobile_banner.webp" alt="Banner" width="1200" height="400"
+            style="width:100%; height:auto;" fetchpriority="high">
     </div>
 
     <nav>
         <ul class="sidebar_mobile">
             <li>
-                <a href="<?php echo $local ?>/phong-kham-da-nhat-viet-phong-kham-da-khoa-uy-tin-tphcm-7.html">giới thiệu</a>
+                <a href="<?php echo $local ?>/phong-kham-da-nhat-viet-phong-kham-da-khoa-uy-tin-tphcm-7.html">giới
+                    thiệu</a>
             </li>
             <li class="sidebar_mobile_li">
                 <div onclick="showShelectOption()">
                     <span>danh mục bệnh</span>
-                    <img src="<?php echo $local ?>/images/icons/icon_down.png" alt="">
+                    <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_down.png" alt="">
                 </div>
                 <!-- <ul class="sidebar_mobile_li-option">
                     <?php foreach ($getMenuMobile as $value) : ?>
@@ -147,7 +168,7 @@
     </nav>
 </header>
 
-<script>
+<!-- <script>
     function showOption(optionId) {
         const allOptions = document.querySelectorAll('.sidebar_mobile_li-option-li ul');
         const allItems = document.querySelectorAll('.sidebar_mobile_li-option-li');
@@ -187,5 +208,6 @@
     });
 
     
-</script>
+</script> -->
 
+<div id="toast-container"></div>

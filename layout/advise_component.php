@@ -20,7 +20,7 @@
 </div>
 
 <script>
-function formatPhoneNumber(phoneNumber) {
+    function formatPhoneNumber(phoneNumber) {
         let cleaned = ('' + phoneNumber).replace(/\D/g, '');
         let match = cleaned.match(/^(\d{4})(\d{3})(\d{3})$/);
         if (match) {
@@ -42,7 +42,8 @@ function formatPhoneNumber(phoneNumber) {
 
         formData['url'] = window.location.href;
 
-        if ( formData.hoten !== '' && formData.ngaysinh !== '' && formData.sdt !== '' && formData.trieuchung !== '') {
+        if (formData.hoten !== '' && formData.ngaysinh !== '' && formData.sdt !== '' && formData.trieuchung !==
+            '') {
             if (formatPhoneNumber(formData.sdt)) {
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", "<?php echo $local ?>/classes/ajax/create_form_tu_van.php", true);
@@ -51,26 +52,26 @@ function formatPhoneNumber(phoneNumber) {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         let response = JSON?.parse(xhr.responseText);
                         if (response.status === 'success') {
-                            toastr.success(response.message);
+                            toastr(response.message, 'success');
                             for (let i = 0; i < inputs.length; i++) {
                                 let input = inputs[i];
                                 input.value = '';
                             }
 
                         } else {
-                            toastr.error(response.message);
+                            toastr(response.message, 'warning');
                         }
                     }
                 };
-                
+
 
                 xhr.send(JSON.stringify(formData));
             } else {
-                toastr.error("Số điện thoại không hợp lệ!");
+                toastr("Số điện thoại không hợp lệ!", 'warning');
             }
 
         } else {
-            toastr.error("Tất cả các trường không được bỏ trống!");
+            toastr("Tất cả các trường không được bỏ trống!", 'warning');
         }
 
 

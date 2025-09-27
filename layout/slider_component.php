@@ -1,13 +1,18 @@
 <section id="slider" class="slider">
     <div class="slide_show w-100">
         <div style="display: flex;" class="list_image">
-            <img height="100%" width="100%" src="<?php echo $local ?>/images/banner/bg_carousell0.webp" alt="...">
-            <img height="100%" width="100%" src="<?php echo $local ?>/images/banner/bg_carousell01.webp" alt="...">
-            <img height="100%" width="100%" src="<?php echo $local ?>/images/banner/bg_carousell02.webp" alt="...">
+            <img fetchpriority=high height="100%" width="100%"
+                src="<?php echo $local ?>/images/banner/bg_carousell0.webp" alt="...">
+            <img fetchpriority=high height="100%" width="100%"
+                src="<?php echo $local ?>/images/banner/bg_carousell01.webp" alt="...">
+            <img fetchpriority=high height="100%" width="100%"
+                src="<?php echo $local ?>/images/banner/bg_carousell02.webp" alt="...">
         </div>
         <div class="btns">
-            <div class="btn-left btn"><img width="40px" height="40px" src="<?php echo $local ?>/images/icons/icon_prev.webp" alt="..."></div>
-            <div class="btn-right btn"><img width="40px" height="40px" src="<?php echo $local ?>/images/icons/icon_next.webp" alt="..."></i></div>
+            <div class="btn-left btn"><img width="40px" height="40px"
+                    src="<?php echo $local ?>/images/icons/icon_prev.webp" alt="..."></div>
+            <div class="btn-right btn"><img width="40px" height="40px"
+                    src="<?php echo $local ?>/images/icons/icon_next.webp" alt="..."></i></div>
         </div>
         <div class="index-images">
             <div class="index-item index-item-0 active"></div>
@@ -42,7 +47,7 @@
                 </div>
             </div>
             <div class="slider__chat-button">
-                <button name="submit" >
+                <button name="submit">
                     GỬI
                 </button>
             </div>
@@ -72,13 +77,14 @@
             formData[input.name] = input.value;
         }
         formData['url'] = window.location.href;
-        if (formData.giokham !== '' && formData.hoten !== '' && formData.ngaykham !== '' && formData.ngaysinh !== '' && formData.sdt !== '' && formData.trieuchung !== '') {
+        if (formData.giokham !== '' && formData.hoten !== '' && formData.ngaykham !== '' && formData.ngaysinh !==
+            '' && formData.sdt !== '' && formData.trieuchung !== '') {
             if (formatPhoneNumber(formData.sdt)) {
-                if(formData.hoten.length > 100){
-                   return toastr.error("Họ và tên không được vượt quá 100 ký tự");
+                if (formData.hoten.length > 100) {
+                    return toastr("Họ và tên không được vượt quá 100 ký tự", 'warning');
                 }
-                if(formData.trieuchung.length > 200){
-                   return toastr.error("Mô tả triệu chứng không được vượt quá 200 ký tự");
+                if (formData.trieuchung.length > 200) {
+                    return toastr("Mô tả triệu chứng không được vượt quá 200 ký tự", 'warning');
                 }
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", "<?php echo $local ?>/classes/khach_hang_ajax.php", true);
@@ -88,25 +94,25 @@
 
                         let response = JSON.parse(xhr.responseText);
                         if (response.status === 'success') {
-                            toastr.success(response.message);
+                            toastr(response.message, 'success');
                             for (let i = 0; i < inputs.length; i++) {
                                 let input = inputs[i];
                                 input.value = '';
                             }
 
                         } else {
-                            toastr.error(response.message);
+                            toastr(response.message, 'warning');
                         }
                     }
                 };
 
                 xhr.send(JSON.stringify(formData));
             } else {
-                toastr.error("Số điện thoại không hợp lệ!");
+                toastr("Số điện thoại không hợp lệ!", 'warning');
             }
 
         } else {
-            toastr.error("Tất cả các trường không được bỏ trống!");
+            toastr("Tất cả các trường không được bỏ trống!", 'warning');
         }
 
 

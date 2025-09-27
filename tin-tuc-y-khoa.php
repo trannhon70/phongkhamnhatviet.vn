@@ -3,20 +3,20 @@
 </head>
 
 <?php
-    $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
-    $current_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    $parsed_url = parse_url($current_url);
-    
-    $path = parse_url($parsed_url['path'], PHP_URL_PATH); // Lấy phần path từ URL
-    $filename = basename($path, ".html"); // Lấy tên file và loại bỏ .html
+$current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+$current_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$parsed_url = parse_url($current_url);
 
-    $getByIdTT = null;
-    if($filename === 'tin-tuc-y-khoa'){
-        $getByIdTT = $tin_tuc->getOneLimitTinTuc();
-    }else {
-        $getByIdTT = $tin_tuc->getByslug_tintuc($filename);
-    }
-    
+$path = parse_url($parsed_url['path'], PHP_URL_PATH); // Lấy phần path từ URL
+$filename = basename($path, ".html"); // Lấy tên file và loại bỏ .html
+
+$getByIdTT = null;
+if ($filename === 'tin-tuc-y-khoa') {
+    $getByIdTT = $tin_tuc->getOneLimitTinTuc();
+} else {
+    $getByIdTT = $tin_tuc->getByslug_tintuc($filename);
+}
+
 ?>
 
 <body>
@@ -25,20 +25,20 @@
         <?php include 'layout/slider_component.php' ?>
         <div class="danhmuc">
             <div class="danhmuc__left">
-               
-                <div class="danhmuc__left-div" >
 
-                
-                <div class="danhmuc__left-form">
-                    <?php 
+                <div class="danhmuc__left-div">
+
+
+                    <div class="danhmuc__left-form">
+                        <?php
                         include_once 'layout/advise_component.php'
-                    ?>
-                </div>
-                <div class="danhmuc__left-banner">
-                    <amp-img class="danhmuc__left-banner-img"
-                        src="<?php echo $local ?>/images/banner/banner_khuyen_mai.webp" height="380px" width="250px"
-                        alt="..."></amp-img>
-                </div>
+                        ?>
+                    </div>
+                    <div class="danhmuc__left-banner">
+                        <img loading="lazy" class="danhmuc__left-banner-img"
+                            src="<?php echo $local ?>/images/banner/banner_khuyen_mai.webp" height="380px" width="250px"
+                            alt="..."></img>
+                    </div>
                 </div>
 
             </div>
@@ -53,10 +53,12 @@
                 <?php } ?>
                 <div class="danhmuc__right-title"><?php echo $getByIdTT['tieu_de'] ?></div>
                 <div id="bg_mobile_km">
-                    <img width="100%" height="auto" src="<?php echo $local ?>/images/logo_mobile/bg_mobile_km.gif" alt="...">
+                    <img width="100%" height="auto" src="<?php echo $local ?>/images/logo_mobile/bg_mobile_km.gif"
+                        alt="...">
                 </div>
                 <hr>
-                <div class="danhmuc__right-content" id="bai-viet"> <?php echo htmlspecialchars_decode($getByIdTT['content']); ?> </div>
+                <div class="danhmuc__right-content" id="bai-viet">
+                    <?php echo htmlspecialchars_decode($getByIdTT['content']); ?> </div>
                 <?php include 'mobile/appointment_mobile.php' ?>
             </div>
         </div>
@@ -147,7 +149,8 @@
 
                     //hiển thị css img chatbox
                     // if (imgElements[i].src.startsWith('<?php echo $local ?>/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
-                    if (imgElements[i].src.startsWith('http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
+                    if (imgElements[i].src.startsWith(
+                            'http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
                         true) {
                         imgElements[i].style.borderRadius = '8px';
                         let divWrapper = document.createElement('p');

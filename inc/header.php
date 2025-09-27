@@ -30,166 +30,45 @@ header("Pragma: no-cache");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: max-age=2592000");
 
-$local = 'http://localhost/_nhatvietnew/phongkhamnhatviet.vn/';
-// $local ='https://phongkhamnhatviet.vn'
+// $local = 'http://localhost/_nhatvietnew/phongkhamnhatviet.vn';
+$local = 'https://phongkhamnhatviet.vn'
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Phòng khám Nhật Việt chuyên điều trị bệnh nam khoa, bệnh xã hội, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
+    <meta name="description"
+        content="Phòng khám Nhật Việt chuyên điều trị bệnh nam khoa, bệnh xã hội, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
     <title>Phòng khám Nhật Việt</title>
     <link rel="icon" href="<?php echo $local ?>/images/icons/icon_logo.png" type="image/x-icon">
-    <link rel="preload" href="<?php echo $local ?>/css/index.min.css" as="style" onload='this.onload=null,this.rel="stylesheet"'>
-    <link rel="preload" href="<?php echo $local ?>/css/toastr.min.css" as="style" onload='this.onload=null,this.rel="stylesheet"'>
+    <link rel="preload" as="image" href="<?php echo $local ?>/images/banner/mobile_banner.webp" fetchpriority="high"
+        media="(max-width: 768px)">
+    <link rel="preload" href="<?php echo $local ?>/css/index.min.css" as="style"
+        onload='this.onload=null,this.rel="stylesheet"'>
 
-    <style amp-boilerplate>
-        body {
-            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both
-        }
 
-        @-webkit-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
+    <!-- CSS mobile -->
+    <link rel="preload" href="<?php echo $local ?>/css/header-mobile.min.css" as="style" media="(max-width: 999px)"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?php echo $local ?>/css/appointment-mobile.min.css" as="style" media="(max-width: 999px)"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?php echo $local ?>/css/footer-mobile.min.css" as="style" media="(max-width: 999px)"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <!-- CSS PC -->
+    <link rel="preload" href="<?php echo $local ?>/css/header.min.css" as="style" media="(min-width: 1000px)"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?php echo $local ?>/css/footer.min.css" as="style" media="(min-width: 1000px)"
+        onload="this.onload=null;this.rel='stylesheet'">
 
-            to {
-                visibility: visible
-            }
-        }
 
-        @-moz-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @-ms-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @-o-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-    </style>
     <noscript>
-        <style amp-boilerplate>
-            body {
-                -webkit-animation: none;
-                -moz-animation: none;
-                -ms-animation: none;
-                animation: none
-            }
-        </style>
         <link rel="stylesheet" href="<?php echo $local ?>/css/index.min.css">
-        <link rel="stylesheet" href="<?php echo $local ?>/css/toastr.min.css">
+
+        <link rel="stylesheet" href="<?php echo $local ?>/css/header-mobile.min.css">
+        <link rel="stylesheet" href="<?php echo $local ?>/css/appointment-mobile.min.css">
+        <link rel="stylesheet" href="<?php echo $local ?>/css/footer-mobile.min.css">
+        <link rel="stylesheet" href="<?php echo $local ?>/css/header.min.css">
+        <link rel="stylesheet" href="<?php echo $local ?>/css/footer.min.css">
     </noscript>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            function updateHeaderStylesheet() {
-                // Xóa các stylesheet cũ nếu có
-                const existingMobile = document.querySelectorAll('link[id^="mobile-"]');
-                const existingDesktop = document.querySelectorAll('link[id^="desktop-"]');
-                existingMobile.forEach(mobile => mobile.remove());
-                existingDesktop.forEach(desktop => desktop.remove());
-
-                // Thêm stylesheet mới dựa trên kích thước cửa sổ
-                if (window.innerWidth < 1000) {
-                    const mobileLink = [
-                        {
-                            href: '<?php echo $local ?>/css/header-mobile.min.css',
-                            id: 'mobile-0'
-                        },
-                        {
-                            href: '<?php echo $local ?>/css/appointment-mobile.min.css',
-                            id: 'mobile-1'
-                        },
-                        {
-                            href: '<?php echo $local ?>/css/footer-mobile.min.css',
-                            id: 'mobile-2'
-                        },
-
-                    ];
-                    mobileLink.forEach(({
-                        href,
-                        id
-                    }) => {
-                        const link = document.createElement('link');
-                        link.rel = 'stylesheet';
-                        link.href = href;
-                        link.id = id;
-                        document.head.appendChild(link);
-                    });
-
-                } else {
-                    const desktopLink = [
-                        {
-                            href: '<?php echo $local ?>/css/header.min.css',
-                            id: 'desktop-0'
-                        },
-                        {
-                            href: '<?php echo $local ?>/css/footer.min.css',
-                            id: 'desktop-1'
-                        },
-                        // {
-                        //     href: 'css/footerPC.min.css',
-                        //     id: 'desktop-2'
-                        // },
-
-                    ];
-                    desktopLink.forEach(({
-                        href,
-                        id
-                    }) => {
-                        const link = document.createElement('link');
-                        link.rel = 'stylesheet';
-                        link.href = href;
-                        link.id = id;
-                        document.head.appendChild(link);
-                    });
-                }
-            }
-
-            updateHeaderStylesheet();
-
-          
-
-            
-            window.addEventListener('resize', () => {
-                console.log('Window resized to:', window.innerWidth);
-                updateHeaderStylesheet();
-              
-            });
-        });
-    </script>
