@@ -1,5 +1,20 @@
 <?php
+// Bật buffer trước
 ob_start();
+
+// Thư mục cache
+$cacheDir = __DIR__ . '/cache/';
+$cacheTime = 300; // 5 phút
+// $cacheTime = 86400; // 24h
+
+// Tạo tên file cache theo URL
+$cacheFile = $cacheDir . md5($_SERVER['REQUEST_URI']) . '.html';
+
+// Nếu cache còn hạn thì xuất luôn
+if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheTime) {
+    readfile($cacheFile);
+    exit; // dừng không chạy PHP nữa
+}
 session_start();
 include 'lib/session.php';
 Session::init();

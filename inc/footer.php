@@ -214,5 +214,18 @@
      });
  </script>
  </body>
+ <?php
+    // Lấy nội dung từ buffer
+    $output = ob_get_clean();
+
+    // Lưu vào cache
+    if (!is_dir($cacheDir)) {
+        mkdir($cacheDir, 0777, true);
+    }
+    file_put_contents($cacheFile, $output);
+
+    // Xuất ra trình duyệt
+    echo $output;
+    ?>
 
  </html>
