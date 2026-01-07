@@ -34,13 +34,6 @@ $get_post_detail = $post->getBaiViet_bySlug($filename);
                     </ul>
                 <?php endforeach; ?>
                 <div class="danhmuc__left-div">
-
-
-                    <div class="danhmuc__left-form">
-                        <?php
-                        include_once 'layout/advise_component.php'
-                        ?>
-                    </div>
                     <div class="danhmuc__left-banner">
                         <img loading="lazy" class="danhmuc__left-banner-img"
                             src="<?php echo $local ?>/images/banner/banner_khuyen_mai.webp" height="380px" width="250px"
@@ -73,7 +66,7 @@ $get_post_detail = $post->getBaiViet_bySlug($filename);
                     điều trị phụ thuộc vào cơ địa của mỗi người. Cần biết thông tin liên hệ để được tư vấn trực
                     tuyến miễn phí.<a href="<?php echo $local ?>">[TƯ VẤN TRỰC TUYẾN]</a>
                 </div>
-                <?php include 'mobile/appointment_mobile.php' ?>
+
             </div>
         </div>
     </main>

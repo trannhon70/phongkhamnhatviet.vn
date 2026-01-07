@@ -20,6 +20,10 @@
 
 .header__mobile-top-center {
     width: 70%;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-transform: capitalize;
 }
 .header__mobile-top-center > input {
     width: var(--width-100);

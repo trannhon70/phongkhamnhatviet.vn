@@ -103,10 +103,10 @@
                 src="<?php echo $local ?>/images/icons/icon_close.webp" height="25px" width="25px" alt="..."></img>
         </div>
         <div class="header__mobile-top-center">
-            <input id="sdt_mobile" type="number" placeholder="Nhập số điện thoại">
+            Phòng khám nhật việt
         </div>
         <div class="header__mobile-top-left">
-            <button onclick="onClickCreatePhone()">Xác Nhận</button>
+
         </div>
     </div>
     <div class="header__mobile-row">

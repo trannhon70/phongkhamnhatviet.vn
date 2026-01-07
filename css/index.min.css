@@ -288,33 +288,6 @@ body {
     .activeexperienced {
         display: var(--display-block);
     }
-    .advise {
-        padding: 0px 10px !important;
-    }
-    .advise__row {
-        height: 60px !important;
-        background-size: 100% 60px !important;
-    }
-    .advise__row-left {
-        font-size: var(--font-size-10) !important;
-        line-height: 16px !important;
-        width: 45% !important;
-    }
-    .advise__row-left-right {
-        width: 55% !important;
-        gap: 3px !important;
-    }
-
-    .advise__row-left-right-input {
-        font-size: var(--font-size-12) !important;
-        width: 70% !important;
-        padding: 5px !important;
-    }
-
-    .advise__row-left-right-bottom {
-        width: 30% !important;
-        font-size: var(--font-size-12) !important;
-    }
 
     .dominance__container {
         padding: 0px 10px !important;

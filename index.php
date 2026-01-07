@@ -6,7 +6,7 @@
     <?php include 'layout/header_component.php' ?>
 
     <main>
-        <?php include 'mobile/appointment_mobile.php' ?>
+
         <?php include 'layout/slider_component.php' ?>
 
         <section id="we__bring" class="we__bring">
@@ -210,17 +210,7 @@
             </div>
 
         </section>
-        <section class="advise" id="advise">
-            <div class="advise__row ">
-                <div class="advise__row-left ">nhận tư vấn sức khỏe từ
-                    các chuyên gia của chúng tôi</div>
-                <div class="advise__row-left-right ">
-                    <input id="sdt_pc" class="advise__row-left-right-input" type="number"
-                        placeholder="Nhập số điện thoại">
-                    <button onclick="onClickCreatePhonePC()" class="advise__row-left-right-bottom">GỬI</button>
-                </div>
-            </div>
-        </section>
+
 
         <section class="dominance" id="dominance">
             <div class=" dominance__container">
@@ -452,52 +442,5 @@
         setInterval(handleChangeSlideFeedback, 4000);
     </script>
 
-    <script>
-        function formatPhoneNumber(phoneNumber) {
-            let cleaned = ('' + phoneNumber).replace(/\D/g, '');
-            let match = cleaned.match(/^(\d{4})(\d{3})(\d{3})$/);
-            if (match) {
-                return '(' + match[1] + ') ' + match[2] + '-' + match[3];
-            }
-            return null;
-        }
 
-        function onClickCreatePhonePC() {
-            let sdt = document.getElementById('sdt_pc').value;
-            if (sdt.trim() !== '') {
-                if (formatPhoneNumber(sdt)) {
-
-                    let baseUrl = window.location.href;
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "classes/tu_van_ajax.php", true);
-                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xhr.onreadystatechange = function() {
-                        if (xhr.readyState === 4 && xhr.status === 200) {
-                            try {
-                                let response = JSON.parse(xhr.responseText);
-                                if (response.status === 'success') {
-                                    toastr(response.message, 'success');
-                                    document.getElementById('sdt_pc').value = '';
-                                } else {
-                                    toastr(response.message, 'warning');
-                                }
-                            } catch (e) {
-
-                                toastr("Đã xảy ra lỗi trong quá trình xử lý phản hồi từ máy chủ.", 'warning');
-                            }
-
-                        }
-                    };
-
-                    xhr.send("sdt=" + sdt + "&url=" + encodeURIComponent(baseUrl));
-                } else {
-                    toastr("Số điện thoại không hợp lệ!", 'warning');
-                }
-
-            } else {
-                toastr("Số điện thoại không được bỏ trống", 'warning');
-
-            }
-        }
-    </script>
     <?php include 'inc/footer.php' ?>

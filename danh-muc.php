@@ -45,11 +45,7 @@ $total_pages = ceil($total_articles / $limit);
 
                     </ul>
                 <?php endforeach; ?>
-                <div class="danhmuc__left-form">
-                    <?php
-                    include_once 'layout/advise_component.php'
-                    ?>
-                </div>
+
                 <div class="danhmuc__left-banner">
                     <img loading="lazy" class="danhmuc__left-banner-img"
                         src="<?php echo $local ?>/images/banner/banner_khuyen_mai.webp" height="380px" width="250px"
@@ -239,7 +235,7 @@ $total_pages = ceil($total_articles / $limit);
                 <img loading="lazy" width="100%" height="auto"
                     src="<?php echo $local ?>/images/logo_mobile/bg_mobile_km.gif" alt="...">
             </div>
-            <?php include 'mobile/appointment_mobile.php' ?>
+
         </div>
     </main>
 
