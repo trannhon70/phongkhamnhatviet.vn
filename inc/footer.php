@@ -60,7 +60,7 @@
                      alt="..."></img>
                  <div class="footer__contact-left-card-div">
                      <h5>ĐỊA CHỈ</h5>
-                     <span>73 Kinh Dương Vương, P.12, Q.6, TP.HCM</span>
+                     <span>73 Kinh Dương Vương, Phường Phú Lâm, TP.HCM</span>
                  </div>
              </div>
              <div class="footer__contact-left-card">

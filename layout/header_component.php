@@ -41,8 +41,7 @@
                     <div class="header__top-list-item-center-top">Địa chỉ
                     </div>
                     <h5 class="">
-                        73 Kinh Dương Vương,
-                        P.12, Q.6, TP.HCM
+                        73 Kinh Dương Vương, Phường Phú Lâm, TP.HCM
                     </h5>
                 </div>
             </div>
