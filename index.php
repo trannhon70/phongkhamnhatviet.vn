@@ -142,7 +142,7 @@
                         alt="..."></img>
                 </div>
             </div>
-            <div class="experienced__bottom">
+            <!-- <div class="experienced__bottom">
                 <div class="experienced__list">
                     <div class="experienced__list-item">
                         <img loading="lazy" src="<?php echo $local ?>/images/users/user_1.webp" alt="..."></img>
@@ -207,7 +207,7 @@
                 <div class="experienced-item experienced-item-1 "></div>
                 <div class="experienced-item experienced-item-2"></div>
                 <div class="experienced-item experienced-item-3"></div>
-            </div>
+            </div> -->
 
         </section>
 

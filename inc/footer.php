@@ -135,7 +135,6 @@
          </a>
      </div>
  </div>
- <?php include "layout/modelThongBao.php" ?>
 
  <script defer src="https://livechat.phongkhamnhatviet.vn/chat-box-ai.js"></script>
  <script async src="<?php echo $local ?>/js/random_number.min.js"></script>
