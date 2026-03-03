@@ -45,8 +45,8 @@ header("Pragma: no-cache");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: max-age=2592000");
 
-$local = 'http://localhost/_nhatvietnew/phongkhamnhatviet.vn';
-// $local = 'https://phongkhamnhatviet.vn'
+// $local = 'http://localhost/_nhatvietnew/phongkhamnhatviet.vn';
+$local = 'https://phongkhamnhatviet.vn'
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,3 +85,22 @@ $local = 'http://localhost/_nhatvietnew/phongkhamnhatviet.vn';
         <link rel="stylesheet" href="<?php echo $local ?>/css/header.min.css">
         <link rel="stylesheet" href="<?php echo $local ?>/css/footer.min.css">
     </noscript>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5QD9GPKH');
+    </script>
+    <!-- End Google Tag Manager -->
