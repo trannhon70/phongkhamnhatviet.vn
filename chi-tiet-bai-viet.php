@@ -192,8 +192,11 @@ setTitleAndScroll();
                         // 'http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
                         true) {
                         imgElements[i].style.borderRadius = '8px';
-                        let divWrapper = document.createElement('p');
+                        imgElements[i].style.setProperty('display', 'block', 'important');
+                        let divWrapper = document.createElement('a');
                         divWrapper.className = 'glow-on-hover';
+                        divWrapper.href = "https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en";
+                        divWrapper.setAttribute("aria-label", "Chat da khoa");
                         imgElements[i].parentNode.insertBefore(divWrapper, imgElements[i]);
                         divWrapper.appendChild(imgElements[i])
                     }
