@@ -104,7 +104,7 @@
                      <span>GỌI NGAY</span>
                  </div>
              </a>
-             <a href="<?php echo $local ?>" class="footer__mobile-container-right">
+             <a href="https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en" class="footer__mobile-container-right">
                  <div>ĐẶT LỊCH</div>
                  <img loading="lazy" width="70px" height="auto" src="<?php echo $local ?>/images/icons/icon_lich.png"
                      alt="...">
@@ -127,7 +127,7 @@
          </a>
      </div>
      <div style="margin-top:10px">
-         <a class="footer_icon_mess" href="<?php echo $local ?>" target="_blank">
+         <a class="footer_icon_mess" href="https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en" target="_blank">
              <img loading="lazy" style="margin-left:3px" src="<?php echo $local ?>/images/logo_mobile/icon_message.webp"
                  height="45px" width="45px" alt="..."></img>
              <div class="ping"></div>
@@ -136,7 +136,7 @@
      </div>
  </div>
 
- <script defer src="https://livechat.phongkhamnhatviet.vn/chat-box-ai.js"></script>
+ <script language="javascript" src="https://tuvan.mayo.com.vn/JS/LsJS.aspx?siteid=KUK38256576&float=1&lng=en"></script>
  <script async src="<?php echo $local ?>/js/random_number.min.js"></script>
 
  <script defer>
