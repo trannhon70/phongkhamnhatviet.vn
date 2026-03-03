@@ -86,7 +86,7 @@
                     <a class="" href="<?php echo $local ?>/tin-tuc-y-khoa.html">tin tức y khoa</a>
                 </li>
                 <li class="header__bottom-nav-ul-li header__bottom-border">
-                    <a class="" href="<?php echo $local ?>">tư vấn trực tuyến</a>
+                    <a class="" href="https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en">tư vấn trực tuyến</a>
                 </li>
             </ul>
         </nav>
@@ -161,7 +161,7 @@
                 <a href="<?php echo $local ?>/tin-tuc-y-khoa.html">tin tức y khoa</a>
             </li>
             <li>
-                <a href="<?php echo $local ?>">tư vấn trực tuyến </a>
+                <a href="https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en">tư vấn trực tuyến </a>
             </li>
         </ul>
     </nav>

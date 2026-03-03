@@ -95,7 +95,7 @@ setTitleAndScroll();
                 <div class="bai-viet-footer">Nội dung bài viết cung cấp nhằm mục đích tham khảo thêm kiến thức y tế,
                     một số nội dung có thể không thuộc nghiệp vụ của phòng khám chúng tôi, Hiệu quả của việc hỗ trợ
                     điều trị phụ thuộc vào cơ địa của mỗi người. Cần biết thông tin liên hệ để được tư vấn trực
-                    tuyến miễn phí.<a href="<?php echo $local ?>">[TƯ VẤN TRỰC TUYẾN]</a>
+                    tuyến miễn phí.<a href="https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en">[TƯ VẤN TRỰC TUYẾN]</a>
                 </div>
 
             </div>
