@@ -120,7 +120,7 @@
          </a>
      </div>
      <div style="margin-top:10px">
-         <a class="footer_icon_zalo" href="<?php echo $local ?>">
+         <a class="footer_icon_zalo" href="https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en">
              <img loading="lazy" src="<?php echo $local ?>/images/logo_mobile/icon_zalo.png" height="50px" width="50px"
                  alt="..."></img>
              <div class="ping_zalo"></div>
