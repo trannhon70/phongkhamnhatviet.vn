@@ -1,5 +1,8 @@
 <?php include 'inc/header.php' ?>
-<link rel="stylesheet" href="<?php echo $local ?>/css/chi-tiet-bai-viet.min.css">
+<link rel="preload" href="<?php echo $local ?>/css/chi-tiet-bai-viet.min.css" as="style" onload='this.onload=null,this.rel="stylesheet"'>
+<noscript>
+    <link rel="stylesheet" href="<?php echo $local ?>/css/chi-tiet-bai-viet.min.css">
+</noscript>
 </head>
 <?php
 $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
