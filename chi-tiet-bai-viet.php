@@ -86,7 +86,7 @@ setTitleAndScroll();
 
                 <?php } ?>
                 <div class="danhmuc__right-title"><?php echo $get_post_detail['tieu_de'] ?></div>
-                <a href="https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en" id="bg_mobile_km">
+                <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" id="bg_mobile_km">
                     <img width="100%" height="auto" src="<?php echo $local ?>/images/logo_mobile/bg_mobile_km.gif"
                         alt="...">
                 </a>
@@ -98,7 +98,7 @@ setTitleAndScroll();
                 <div class="bai-viet-footer">Nội dung bài viết cung cấp nhằm mục đích tham khảo thêm kiến thức y tế,
                     một số nội dung có thể không thuộc nghiệp vụ của phòng khám chúng tôi, Hiệu quả của việc hỗ trợ
                     điều trị phụ thuộc vào cơ địa của mỗi người. Cần biết thông tin liên hệ để được tư vấn trực
-                    tuyến miễn phí.<a href="https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en">[TƯ VẤN TRỰC TUYẾN]</a>
+                    tuyến miễn phí.<a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">[TƯ VẤN TRỰC TUYẾN]</a>
                 </div>
 
             </div>
@@ -198,7 +198,10 @@ setTitleAndScroll();
                         imgElements[i].style.setProperty('display', 'block', 'important');
                         let divWrapper = document.createElement('a');
                         divWrapper.className = 'glow-on-hover';
-                        divWrapper.href = "https://tuvan.mayo.com.vn/LR/Chatpre.aspx?id=KUK38256576&lng=en";
+                        divWrapper.href = "javascript:void(0)";
+                        divWrapper.addEventListener("click", function() {
+                            openZoosUrl('chatwin');
+                        });
                         divWrapper.setAttribute("aria-label", "Chat da khoa");
                         imgElements[i].parentNode.insertBefore(divWrapper, imgElements[i]);
                         divWrapper.appendChild(imgElements[i])
