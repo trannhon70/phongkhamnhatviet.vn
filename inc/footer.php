@@ -8,12 +8,12 @@
                      src="<?php echo $local ?>/images/icons/icon_dash.webp" height="13px" width="750px" alt="..."></img>
              </div>
              <div class="footer__support-body-row">
-                 <a href="<?php echo $local ?>" class="footer__support-body-card">
+                 <a href="tel:+0901869945" class="footer__support-body-card">
                      <img loading="lazy" class="footer__support-body-card-img"
                          src="<?php echo $local ?>/images/icons/icon_group_user.webp" height="54px" width="80px"
                          alt="..."></img>
                      <div class="footer__support-body-text">
-                         <h5>028-7776-7777</h5>
+                         <h5>0901-869-945</h5>
                          <div>Tổng đài hỗ trợ khách hàng 24/7</div>
                      </div>
                  </a>
@@ -51,7 +51,7 @@
                      alt="..."></img>
                  <div class="footer__contact-left-card-div">
                      <h5>HOTLINE</h5>
-                     <span>028-7776-7777</span>
+                     <span>0901-869-945</span>
                  </div>
              </div>
              <div class="footer__contact-left-card">
@@ -93,9 +93,9 @@
      </div>
      <div class="footer__mobile-body">
          <div class="footer__mobile-container">
-             <a href="tel:+02877767777" class="footer__mobile-container-left">
+             <a href="tel:+0901869945" class="footer__mobile-container-left">
                  <div class="footer__mobile-container-left-top">TƯ VẤN TRỰC TUYẾN 24/7</div>
-                 <span class="footer__mobile-container-left-bottom">028-7776-7777</span>
+                 <span class="footer__mobile-container-left-bottom">0901-869-945</span>
                  <div class="footer__mobile-container-left-icon">
                      <img loading="lazy" width="65px" height="auto"
                          src="<?php echo $local ?>/images/logo_mobile/icon_phone_red.png" alt="...">

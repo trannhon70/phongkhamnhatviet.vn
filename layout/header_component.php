@@ -12,7 +12,7 @@
                         alt="..."></img>
                 </div>
                 <div class="header__top-list-item-text">Đường dây nóng <br>
-                    028-7776-7777
+                    0901-869-945
                 </div>
             </div>
             <div class="header__top-list-item">
@@ -113,12 +113,12 @@
             <img loading="lazy" width="100%" height="40px"
                 src="<?php echo $local ?>/images/logo_mobile/logo_mobile.webp" alt="">
         </a>
-        <a href="tel:+02877767777" class="header__mobile-row-right">
+        <a href="tel:+0901869945" class="header__mobile-row-right">
             <img loading="lazy" class="header__mobile-row-right-icon"
                 src="<?php echo $local ?>/images/icons/icon_phone_no.webp" height="30px" width="25px" alt="..."></img>
             <div class="header__mobile-row-right-hotline">
                 <div>TƯ VẤN TRỰC TUYẾN</div>
-                <span>028-7776-7777</span>
+                <span>0901-869-945</span>
             </div>
         </a>
     </div>
