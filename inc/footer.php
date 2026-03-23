@@ -8,7 +8,7 @@
                      src="<?php echo $local ?>/images/icons/icon_dash.webp" height="13px" width="750px" alt="..."></img>
              </div>
              <div class="footer__support-body-row">
-                 <a href="tel:+0901869945" class="footer__support-body-card">
+                 <a href="tel:0901869945" class="footer__support-body-card">
                      <img loading="lazy" class="footer__support-body-card-img"
                          src="<?php echo $local ?>/images/icons/icon_group_user.webp" height="54px" width="80px"
                          alt="..."></img>
@@ -93,7 +93,7 @@
      </div>
      <div class="footer__mobile-body">
          <div class="footer__mobile-container">
-             <a href="tel:+0901869945" class="footer__mobile-container-left">
+             <a href="tel:0901869945" class="footer__mobile-container-left">
                  <div class="footer__mobile-container-left-top">TƯ VẤN TRỰC TUYẾN 24/7</div>
                  <span class="footer__mobile-container-left-bottom">0901-869-945</span>
                  <div class="footer__mobile-container-left-icon">
