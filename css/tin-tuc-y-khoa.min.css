@@ -1,9 +1,6 @@
-
-
-
 /* danh muc */
 
-.danhmuc{
+.danhmuc {
     max-width: var(--container);
     margin: var(--margin-auto);
     display: var(--display-flex);
@@ -11,11 +8,11 @@
     gap: 20px;
 }
 
-.danhmuc__left{
+.danhmuc__left {
     width: 25%;
 }
 
-.danhmuc__left-span{
+.danhmuc__left-span {
     font-size: var(--font-size-22);
     font-weight: var(--font-weight-700);
     color: var(--color-01969A);
@@ -29,21 +26,21 @@
     margin-top: 10px;
 }
 
-.danhmuc__left-li{
+.danhmuc__left-li {
     width: 100%;
     padding: 8px 0px;
     border-bottom: 1px solid var(--color-01969A);
 }
 
 .danhmuc__left-li:hover {
-    transition: .5s;
-    background-color: var(--background-color-23dee448) ;
+    transition: 0.5s;
+    background-color: var(--background-color-23dee448);
 }
 
-.danhmuc__left-li-active{
-    background-color: var(--background-color-23dee448) ;
+.danhmuc__left-li-active {
+    background-color: var(--background-color-23dee448);
 }
-.danhmuc__left-li > a{
+.danhmuc__left-li > a {
     display: var(--display-block);
     width: var(--width-100);
     font-size: var(--font-size-16);
@@ -51,10 +48,9 @@
     font-weight: var(--font-weight-700);
     text-transform: var(--text-tranform-capitalize);
     text-decoration: none;
-
 }
 
-.danhmuc__left-form{
+.danhmuc__left-form {
     width: auto;
     padding: 10px;
     margin-top: 20px;
@@ -63,7 +59,7 @@
     background-image: linear-gradient(to right, var(--background-color-067579), var(--background-color-00D8D8));
 }
 
-.danhmuc__left-title{
+.danhmuc__left-title {
     font-weight: var(--font-weight-700);
     font-size: var(--font-size-18);
     text-align: var(--text-center);
@@ -72,12 +68,12 @@
     text-transform: var(--text-tranform-uppercase);
 }
 
-.danhmuc__left-input{
+.danhmuc__left-input {
     width: auto;
     margin-top: 10px;
 }
 
-.danhmuc__left-input> input {
+.danhmuc__left-input > input {
     width: 90%;
     height: 30px;
     border-radius: 8px;
@@ -89,7 +85,7 @@
     font-style: italic;
 }
 
-.danhmuc__left-button{
+.danhmuc__left-button {
     margin-top: 10px;
     width: 60%;
     border-radius: 8px;
@@ -104,27 +100,26 @@
     border: none;
 }
 
-.danhmuc__left-button:hover{
+.danhmuc__left-button:hover {
     background-color: rgb(235, 32, 32);
     color: var(--color-white);
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.danhmuc__left-banner{
+.danhmuc__left-banner {
     margin-top: 10px;
 }
 
-.danhmuc__left-banner-img{
+.danhmuc__left-banner-img {
     border-radius: 10px;
     border: 1px solid var(--color-01969A);
 }
 
-
-.danhmuc__right{
+.danhmuc__right {
     width: 75%;
 }
 
-.danhmuc__right-title{
+.danhmuc__right-title {
     margin-top: 20px;
     color: var(--color-white);
     font-size: var(--font-size-22);
@@ -134,15 +129,15 @@
     padding: 10px 15px;
 }
 
-.danhmuc__right-content{
+.danhmuc__right-content {
     margin-top: 15px;
 }
 
-.danhmuc__right>hr {
+.danhmuc__right > hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid rgba(0, 0, 0, .1)
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* chi tiết bài viết */
@@ -265,4 +260,86 @@
     100% {
         background-position: 0 0;
     }
+}
+
+.post_connection {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.post_connection_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0077c7;
+}
+
+.post_connection_item {
+    display: block;
+    text-decoration: none;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    color: black;
+    border-bottom: 1px dashed #0077c7;
+    font-size: 14px;
+    white-space: nowrap; /* không xuống dòng */
+    overflow: hidden; /* ẩn phần dư */
+    text-overflow: ellipsis; /* hiển thị ... */
+}
+
+.post_connection_item:hover {
+    background-color: #0077c7;
+    color: white;
+    font-weight: 700;
+}
+.cardbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.cardbs__body {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+    border-top: 1px solid #eee;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    width: 350px;
+    max-width: 100%;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 10px;
+}
+.cardbs__body-left {
+    width: 30%;
+}
+
+.cardbs__body-left > img {
+    /* border: 1px solid #999; */
+    border-radius: 50%;
+    width: 100%;
+}
+
+.cardbs__body-right {
+    width: 70%;
+}
+
+.cardbs__body-right-bs {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cardbs__body-right-ck {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 7px;
+}
+
+.cardbs__body-right-ct {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 7px;
+    line-height: 20px;
 }

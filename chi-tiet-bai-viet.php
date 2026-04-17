@@ -14,7 +14,9 @@ $filename = basename($path, ".html"); // Lấy tên file và loại bỏ .html
 
 $getDanhMucBenhByBaiViet = $khoas->getDanhMucBenhByBaiViet($filename);
 $getActiveByBenh = $benh->getActiveByBenh($filename);
-$get_post_detail = $post->getBaiViet_bySlug($filename);
+$data = $post->getBaiViet_bySlug($filename);
+$get_post_detail = $data['post'];
+$post_connection = $data['related'];
 
 function setTitleAndScroll()
 {
@@ -77,6 +79,9 @@ setTitleAndScroll();
 
             </div>
             <div class="danhmuc__right">
+                <div id="category__right-breadcrumb" class="category__right-breadcrumb">
+                    Trang chủ > <?php echo $get_post_detail['name_khoa'] ?>
+                </div>
                 <?php if (Session::get('role') === '1' || Session::get('role') === '2') {
                 ?>
 
@@ -86,23 +91,49 @@ setTitleAndScroll();
 
                 <?php } ?>
                 <div class="danhmuc__right-title"><?php echo $get_post_detail['tieu_de'] ?></div>
-                <!-- <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" id="bg_mobile_km">
+                <div id="cardbs">
+                    <div
+                        style="padding: 10px; display: flex; align-items: center; justify-content: space-between; background-color: aliceblue; ">
+                        <div style="display: flex; align-items: center; gap: 2px; ">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <div style="color: #ff9900; font-weight: 700;">
+                                9.5/10 <span style="color: #999999; font-weight: 500;"> điểm</span>
+                            </div>
+                        </div>
+                        <div id="views" style="color: #999999; font-weight: 700;">
+                            Lượt xem: ...
+                        </div>
+                    </div>
+
+                </div>
+                <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" id="bg_mobile_km">
                     <img width="100%" height="auto" src="<?php echo $local ?>/images/logo_mobile/bg_mobile_km.gif"
                         alt="...">
-                </a> -->
+                </a>
                 <hr>
 
                 <div class="danhmuc__right-content" id="bai-viet">
 
                 </div>
-                <div class="bai-viet-footer">Nội dung bài viết cung cấp nhằm mục đích tham khảo thêm kiến thức y tế,
-                    một số nội dung có thể không thuộc nghiệp vụ của phòng khám chúng tôi, Hiệu quả của việc hỗ trợ
-                    điều trị phụ thuộc vào cơ địa của mỗi người. Cần biết thông tin liên hệ để được tư vấn trực
-                    tuyến miễn phí.<a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;">[TƯ VẤN TRỰC TUYẾN]</a>
-                </div>
-
             </div>
         </div>
+        <div class="post_connection">
+            <div class="post_connection_title">Danh sách bài viết liên quan :</div>
+            <?php foreach ($post_connection as $index => $item) { ?>
+                <a class="post_connection_item" href="<?php echo $item["slug"] ?>.html"><span><?php echo $index + 1; ?> .</span> <?php echo $item['title']; ?></a>
+            <?php } ?>
+
+        </div>
+        <?php include_once "layout/feedback_component.php" ?>
     </main>
 
     <script>
