@@ -134,18 +134,20 @@
 <script>
     const target = document.body;
 
-    const observer = new MutationObserver(() => {
-        const el = document.getElementById("LRfloater2");
-        if (el) {
-            el.style.zIndex = "2147483646";
-        }
-    });
+    if (!window.lrObserver) {
+        window.lrObserver = new MutationObserver(() => {
+            const el = document.getElementById("LRfloater2");
+            if (el) {
+                el.style.zIndex = "2147483646";
+            }
+        });
 
-    observer.observe(target, {
-        childList: true,
-        subtree: true,
-        attributes: true
-    });
+        window.lrObserver.observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true
+        });
+    }
     document.addEventListener("DOMContentLoaded", () => {
         const live = document.getElementById("live");
         const closeBtn = document.getElementById("closeBtn");
